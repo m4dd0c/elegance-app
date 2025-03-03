@@ -97,7 +97,7 @@ export function Navbar() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.2 }}
-            className="fixed px-4 inset-0 z-50 h-screen !bg-black md:hidden"
+            className="fixed px-4 inset-0 z-50 h-screen bg-background md:hidden"
           >
             <div className="container h-full flex flex-col">
               <div className="flex h-16 items-center justify-between">
@@ -125,7 +125,7 @@ export function Navbar() {
                     transition: { staggerChildren: 0.05, staggerDirection: -1 },
                   },
                 }}
-                className="flex flex-col space-y-6 py-12 bg-black w-full"
+                className="flex flex-col space-y-6 py-12 w-full"
               >
                 {navLinks.map((link) => (
                   <motion.div
