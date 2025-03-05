@@ -9,6 +9,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { useToast } from "@/hooks/use-toast";
+import { Instagram, MessageCircle } from "lucide-react";
 
 export default function ContactPage() {
   const { toast } = useToast();
@@ -34,6 +35,8 @@ export default function ContactPage() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     console.log("Form submitted:", formData);
+
+    // TODO: send actual email
 
     // Show success toast
     toast({
@@ -87,17 +90,17 @@ export default function ContactPage() {
               {
                 icon: <Phone className="h-6 w-6" />,
                 title: "Call Us",
-                details: ["+1 (555) 123-4567"],
+                details: ["+91 91666-92200"],
               },
               {
                 icon: <Mail className="h-6 w-6" />,
                 title: "Email Us",
-                details: ["info@elegancefurniture.com"],
+                details: ["maheshartcraft0@gmail.com"],
               },
               {
                 icon: <Clock className="h-6 w-6" />,
                 title: "Opening Hours",
-                details: ["Mon-Sat: 10am - 7pm", "Sunday: 11am - 5pm"],
+                details: ["Mon-Sun: 10am - 7pm"],
               },
             ].map((item, index) => (
               <motion.div
@@ -200,14 +203,6 @@ export default function ContactPage() {
                           />
                           <Label htmlFor="product">Product Question</Label>
                         </div>
-                        <div className="flex items-center space-x-2">
-                          <RadioGroupItem value="Custom Order" id="custom" />
-                          <Label htmlFor="custom">Custom Order</Label>
-                        </div>
-                        <div className="flex items-center space-x-2">
-                          <RadioGroupItem value="Support" id="support" />
-                          <Label htmlFor="support">Support</Label>
-                        </div>
                       </div>
                     </RadioGroup>
                   </div>
@@ -242,17 +237,26 @@ export default function ContactPage() {
               <p className="mt-4 text-muted-foreground">
                 Experience our furniture in person at our flagship showroom.
               </p>
-              <div className="mt-8 aspect-square h-full w-full overflow-hidden rounded-lg bg-muted">
-                {/* This would be a map in a real implementation */}
-                <div className="flex h-full w-full items-center justify-center bg-muted p-8 text-center">
-                  <div>
-                    <MapPin className="mx-auto h-12 w-12 text-muted-foreground" />
-                    <p className="mt-4 text-lg font-medium">
-                      123 Furniture Lane, Portland, OR 97205
-                    </p>
-                    <p className="mt-2 text-muted-foreground">
-                      Interactive map would be displayed here
-                    </p>
+
+              <div className="mt-8 aspect-square h-full w-full overflow-hidden rounded-lg border flex items-center justify-center p-8 text-center">
+                <div>
+                  <MapPin className="mx-auto h-12 w-12 text-muted-foreground" />
+                  <p className="mt-4 text-lg font-medium">
+                    123 Furniture Lane, Portland, OR 97205
+                  </p>
+                  <p className="mt-2 text-muted-foreground">
+                    Visit us to explore our handcrafted furniture in person.
+                  </p>
+
+                  <div className="flex space-x-4">
+                    <Button variant="ghost" size="icon">
+                      <Instagram className="h-5 w-5" />
+                      <span className="sr-only">Instagram</span>
+                    </Button>
+                    <Button variant="ghost" size="icon">
+                      <MessageCircle className="h-5 w-5" />
+                      <span className="sr-only">Whatsapp</span>
+                    </Button>
                   </div>
                 </div>
               </div>
@@ -275,29 +279,34 @@ export default function ContactPage() {
           <div className="mx-auto mt-12 grid max-w-4xl gap-6">
             {[
               {
-                question: "Do you offer design consultations?",
+                question: "How can I inquire about a product?",
                 answer:
-                  "Yes, we offer complimentary design consultations at our showroom. Our design experts can help you select the perfect pieces for your space and provide layout recommendations.",
+                  "You can easily inquire about any product by filling out the inquiry form on the product page. Our team will get back to you with details as soon as possible.",
               },
               {
-                question: "What is your delivery policy?",
+                question: "Where can I see your products in person?",
                 answer:
-                  "We offer white-glove delivery service for all orders. Delivery is free for orders over $1,500 within the continental US. Our team will assemble and place your furniture exactly where you want it.",
+                  "You can visit our showroom to explore our furniture collection in person. Contact us to schedule an appointment or check our showroom location on the website.",
               },
               {
-                question: "Can I customize my furniture?",
+                question: "Do you provide customization options?",
                 answer:
-                  "Absolutely! Many of our pieces can be customized with different fabrics, finishes, and dimensions. Please contact us for more information about custom orders.",
+                  "Yes, many of our furniture pieces can be customized in terms of materials, finishes, and sizes. Reach out to us with your requirements, and we’ll be happy to assist.",
               },
               {
-                question: "What is your return policy?",
+                question: "Can I get design recommendations?",
                 answer:
-                  "We offer a 30-day return policy for standard items in original condition. Custom orders are non-returnable. Please refer to our Returns & Exchanges page for complete details.",
+                  "Absolutely! Our team offers expert design advice to help you choose the right pieces for your space. Feel free to contact us for a consultation.",
               },
               {
-                question: "How long does shipping take?",
+                question: "What materials do you use?",
                 answer:
-                  "Shipping times vary depending on the item and your location. In-stock items typically ship within 1-2 weeks. Custom orders may take 8-12 weeks. You'll receive an estimated delivery date at checkout.",
+                  "We use high-quality, sustainable materials to craft our furniture, ensuring durability and aesthetic appeal. You can find material details on each product page.",
+              },
+              {
+                question: "How do I maintain my furniture?",
+                answer:
+                  "Proper care depends on the material of your furniture. We provide maintenance guidelines for each piece to help you keep it in excellent condition for years.",
               },
             ].map((faq, index) => (
               <motion.div
@@ -318,4 +327,3 @@ export default function ContactPage() {
     </div>
   );
 }
-

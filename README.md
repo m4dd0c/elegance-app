@@ -1,2 +1,1 @@
-# elegance
-# elegance-app
+# Mahesh Handicrafts

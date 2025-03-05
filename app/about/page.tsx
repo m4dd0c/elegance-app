@@ -21,7 +21,7 @@ export default function AboutPage() {
                 Our Story
               </h1>
               <p className="mt-6 text-lg text-muted-foreground">
-                Founded in 2010, Elegance Furniture began with a simple mission:
+                Founded in 1990, Mahesh Handicrafts began with a simple mission:
                 to create beautiful, functional furniture that transforms houses
                 into homes. What started as a small workshop has grown into a
                 beloved brand known for exceptional craftsmanship and timeless
@@ -41,7 +41,7 @@ export default function AboutPage() {
             >
               <Image
                 src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
-                alt="Elegance Furniture workshop"
+                alt="Mahesh Handicrafts workshop"
                 fill
                 className="object-cover"
               />
@@ -119,52 +119,46 @@ export default function AboutPage() {
               Our Journey
             </h2>
             <p className="mx-auto mt-4 max-w-2xl text-muted-foreground">
-              The story of how Elegance Furniture has evolved over the years.
+              The story of how Mahesh Handicrafts has evolved over the years.
             </p>
           </div>
           <div className="mx-auto max-w-3xl">
             {[
               {
-                year: "2010",
+                year: "1990",
                 title: "The Beginning",
                 description:
-                  "Elegance Furniture was founded by Michael and Sarah Thompson in their small workshop in Portland, Oregon.",
+                  "Mahesh Handicrafts was founded by Michael and Sarah Thompson in their small workshop in Portland, Oregon.",
               },
               {
-                year: "2013",
+                year: "2000",
                 title: "First Showroom",
                 description:
                   "We opened our first showroom, allowing customers to experience our furniture in person.",
               },
               {
-                year: "2015",
+                year: "2005",
                 title: "Sustainable Initiative",
                 description:
                   "We launched our commitment to sustainable practices, ensuring all wood is responsibly sourced.",
               },
               {
-                year: "2018",
-                title: "National Recognition",
+                year: "2010",
+                title: "National Expansion",
                 description:
-                  "Elegance was featured in Architectural Digest as one of the top emerging furniture brands.",
+                  "Mahesh Handicrafts began building nationally, bringing our designs to homes around the world.",
               },
               {
                 year: "2020",
-                title: "Online Expansion",
+                title: "Mission Growth",
                 description:
-                  "We expanded our online presence, making our furniture accessible nationwide.",
-              },
-              {
-                year: "2023",
-                title: "International Growth",
-                description:
-                  "Elegance Furniture began shipping internationally, bringing our designs to homes around the world.",
+                  "We continue to grow while staying true to our founding principles of quality, sustainability, and beautiful design.",
               },
               {
                 year: "2025",
-                title: "Today",
+                title: "Online Expansion",
                 description:
-                  "We continue to grow while staying true to our founding principles of quality, sustainability, and beautiful design.",
+                  "We expanded our online presence, making our furniture accessible nationwide.",
               },
             ].map((milestone, index) => (
               <motion.div
@@ -206,16 +200,16 @@ export default function AboutPage() {
               Meet Our Team
             </h2>
             <p className="mx-auto mt-4 max-w-2xl text-muted-foreground">
-              The talented individuals behind Elegance Furniture.
+              The talented individuals behind Mahesh Handicrafts.
             </p>
           </div>
           <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
             {[
               {
-                name: "Michael Thompson",
+                name: "Hitesh Suthar",
                 role: "Founder & CEO",
                 image:
-                  "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+                  "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
               },
               {
                 name: "Sarah Thompson",
@@ -227,7 +221,7 @@ export default function AboutPage() {
                 name: "David Chen",
                 role: "Head of Design",
                 image:
-                  "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+                  "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
               },
               {
                 name: "Emily Rodriguez",

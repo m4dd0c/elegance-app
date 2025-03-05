@@ -1,8 +1,7 @@
 "use client";
 import Link from "next/link";
-import { Facebook, Instagram, Twitter } from "lucide-react";
+import { Instagram, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
 import { Separator } from "@/components/ui/separator";
 
 export function Footer() {
@@ -11,23 +10,21 @@ export function Footer() {
       <div className="container mx-auto px-4 py-12 md:px-6 md:py-16">
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
           <div className="space-y-4">
-            <h3 className="font-playfair text-xl font-bold">Elegance</h3>
+            <h3 className="font-playfair text-xl font-bold">
+              Mahesh Handicrafts
+            </h3>
             <p className="text-muted-foreground">
               Crafting beautiful spaces with timeless furniture designs since
               2010.
             </p>
             <div className="flex space-x-4">
               <Button variant="ghost" size="icon">
-                <Facebook className="h-5 w-5" />
-                <span className="sr-only">Facebook</span>
-              </Button>
-              <Button variant="ghost" size="icon">
                 <Instagram className="h-5 w-5" />
                 <span className="sr-only">Instagram</span>
               </Button>
               <Button variant="ghost" size="icon">
-                <Twitter className="h-5 w-5" />
-                <span className="sr-only">Twitter</span>
+                <MessageCircle className="h-5 w-5" />
+                <span className="sr-only">Whatsapp</span>
               </Button>
             </div>
           </div>
@@ -116,7 +113,7 @@ export function Footer() {
         </div>
         <Separator className="my-8" />
         <div className="flex flex-col items-center justify-between space-y-4 text-sm text-muted-foreground md:flex-row md:space-y-0">
-          <p>© 2025 Elegance Furniture. All rights reserved.</p>
+          <p>© 2025 Mahesh Handicrafts. All rights reserved.</p>
         </div>
       </div>
     </footer>

@@ -11,7 +11,6 @@ import { ModeToggle } from "@/components/mode-toggle";
 const navLinks = [
   { href: "/", label: "Home" },
   { href: "/products", label: "Products" },
-  { href: "/collections", label: "Collections" },
   { href: "/about", label: "About" },
   { href: "/contact", label: "Contact" },
 ];
@@ -49,7 +48,9 @@ export function Navbar() {
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex h-16 items-center justify-between">
           <Link href="/" className="flex items-center">
-            <span className="font-playfair text-2xl font-bold">Elegance</span>
+            <span className="font-playfair text-2xl font-bold">
+              Mahesh Handicraft
+            </span>
           </Link>
 
           <nav className="hidden md:flex space-x-8">
@@ -103,7 +104,7 @@ export function Navbar() {
               <div className="flex h-16 items-center justify-between">
                 <Link href="/" className="flex items-center">
                   <span className="font-playfair text-2xl font-bold">
-                    Elegance
+                    Mahesh Handicraft
                   </span>
                 </Link>
                 <Button

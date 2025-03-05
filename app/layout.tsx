@@ -17,7 +17,7 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "Elegance - Modern Furniture",
+  title: "Mahesh Handicrafts",
   description:
     "Discover our collection of modern, elegant furniture for your home",
 };

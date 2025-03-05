@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { ArrowRight, Star } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -15,17 +15,16 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import {
-  collections,
-  featuredProducts,
-  testimonials,
-} from "@/lib/constants/data";
+import { collections, products, testimonials } from "@/lib/constants/data";
+import ProductCard from "@/components/cards/ProductCard";
 
 export default function Home() {
   const [mounted, setMounted] = useState(false);
+  const [featuredProducts, setFeaturedProducts] = useState(products);
 
   useEffect(() => {
     setMounted(true);
+    setFeaturedProducts((prev) => prev.filter((el) => el.featured));
   }, []);
 
   if (!mounted) {
@@ -86,40 +85,7 @@ export default function Home() {
           </div>
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {featuredProducts.map((product, index) => (
-              <motion.div
-                key={product.id}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
-              >
-                <Card className="overflow-hidden">
-                  <div className="aspect-square relative overflow-hidden">
-                    <Image
-                      src={product.image}
-                      alt={product.name}
-                      fill
-                      className="object-cover transition-transform hover:scale-105"
-                    />
-                  </div>
-                  <CardContent className="p-4">
-                    <div className="mb-2 flex items-center justify-between">
-                      <span className="text-sm text-muted-foreground">
-                        {product.category}
-                      </span>
-                      <div className="flex items-center">
-                        <Star className="mr-1 h-4 w-4 fill-primary text-primary" />
-                        <span className="text-sm">{product.rating}</span>
-                      </div>
-                    </div>
-                    <h3 className="font-medium">{product.name}</h3>
-                    <p className="mt-1 font-semibold">${product.price}</p>
-                    <Button className="mt-4 w-full" variant="outline" asChild>
-                      <Link href={`/products/${product.id}`}>View Details</Link>
-                    </Button>
-                  </CardContent>
-                </Card>
-              </motion.div>
+              <ProductCard index={index} key={product.id} product={product} />
             ))}
           </div>
           <div className="mt-12 text-center">
@@ -138,7 +104,7 @@ export default function Home() {
         <div className="container mx-auto px-4 md:px-6">
           <div className="mb-12 text-center">
             <h2 className="font-playfair text-3xl font-bold md:text-4xl">
-              Shop by Collection
+              Available Collections
             </h2>
             <p className="mx-auto mt-4 max-w-2xl text-muted-foreground">
               Explore our carefully curated collections designed for every room
@@ -209,7 +175,7 @@ export default function Home() {
         <div className="container mx-auto px-4 md:px-6">
           <div className="mb-12 text-center">
             <h2 className="font-playfair text-3xl font-bold md:text-4xl">
-              Why Choose Elegance
+              Why Choose Mahesh Handicrafts
             </h2>
             <p className="mx-auto mt-4 max-w-2xl text-muted-foreground">
               We&apos;re committed to providing exceptional furniture with
@@ -231,13 +197,13 @@ export default function Home() {
                 icon: "🔨",
               },
               {
-                title: "Free Delivery",
+                title: "Customization Options",
                 description:
-                  "Enjoy free white-glove delivery service on all orders over $1,500 within the continental US.",
-                icon: "🚚",
+                  "Tailor your furniture to your style with a range of customizable finishes, fabrics, and sizes.",
+                icon: "🎨",
               },
               {
-                title: "10-Year Warranty",
+                title: "Best Quality",
                 description:
                   "We stand behind our quality with an industry-leading warranty on all our furniture.",
                 icon: "🛡️",
@@ -269,7 +235,7 @@ export default function Home() {
             </h2>
             <p className="mx-auto mt-4 max-w-2xl text-muted-foreground">
               Hear from our satisfied customers about their experience with
-              Elegance furniture.
+              Mahesh Handicrafts.
             </p>
           </div>
           <Carousel className="mx-auto max-w-5xl">
