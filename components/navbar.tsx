@@ -7,6 +7,8 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ModeToggle } from "@/components/mode-toggle";
+import logo from "@/assets/logo.png";
+import Image from "next/image";
 
 const navLinks = [
   { href: "/", label: "Home" },
@@ -47,10 +49,18 @@ export function Navbar() {
     >
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex h-16 items-center justify-between">
-          <Link href="/" className="flex items-center">
-            <span className="font-playfair text-2xl font-bold">
-              Mahesh Handicraft
-            </span>
+          <Link href="/" className="flex gap-2 items-center">
+            <Image
+              height={60}
+              width={60}
+              src={logo}
+              alt="logo"
+              className="max-md:h-12 max-md:w-auto"
+            />
+            <div className="font-playfair text-md md:text-lg leading-tight font-bold">
+              <h1>Mahesh</h1>
+              <h1>Handicrafts</h1>
+            </div>
           </Link>
 
           <nav className="hidden md:flex space-x-8">
@@ -103,9 +113,7 @@ export function Navbar() {
             <div className="container h-full flex flex-col">
               <div className="flex h-16 items-center justify-between">
                 <Link href="/" className="flex items-center">
-                  <span className="font-playfair text-2xl font-bold">
-                    Mahesh Handicraft
-                  </span>
+                  <Image height={50} width={50} src={logo} alt="logo" />
                 </Link>
                 <Button
                   variant="ghost"
