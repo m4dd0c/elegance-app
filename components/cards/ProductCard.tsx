@@ -27,7 +27,7 @@ const ProductCard = ({
       transition={{ duration: 0.5, delay: index * 0.05 }}
       viewport={{ once: true }}
     >
-      <div className="overflow-hidden">
+      <Link href={`/products/${product?.id}`} className="overflow-hidden">
         <div className="aspect-square relative overflow-hidden">
           <Image
             src={product?.image ?? fallback}
@@ -49,7 +49,7 @@ const ProductCard = ({
             </span>
           </div>
         </div>
-      </div>
+      </Link>
     </motion.div>
   );
 };
