@@ -10,6 +10,7 @@ import { Label } from "@/components/ui/label";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { useToast } from "@/hooks/use-toast";
 import { Instagram, MessageCircle } from "lucide-react";
+import Link from "next/link";
 
 export default function ContactPage() {
   const { toast } = useToast();
@@ -90,7 +91,7 @@ export default function ContactPage() {
               {
                 icon: <Phone className="h-6 w-6" />,
                 title: "Call Us",
-                details: ["+91 91666-92200"],
+                details: ["+91 91666-92200", "+91 94613-88049 "],
               },
               {
                 icon: <Mail className="h-6 w-6" />,
@@ -248,15 +249,23 @@ export default function ContactPage() {
                     Visit us to explore our handcrafted furniture in person.
                   </p>
 
-                  <div className="flex space-x-4">
-                    <Button variant="ghost" size="icon">
-                      <Instagram className="h-5 w-5" />
+                  <div className="flex mx-auto w-fit my-4 space-x-5">
+                    <Link
+                      title="Instagram"
+                      href="https://instagram.com/mahesh_art_interior"
+                      target="_blank"
+                    >
+                      <Instagram className="h-7 w-7" color="purple" />
                       <span className="sr-only">Instagram</span>
-                    </Button>
-                    <Button variant="ghost" size="icon">
-                      <MessageCircle className="h-5 w-5" />
+                    </Link>
+                    <Link
+                      target="_blank"
+                      title="Whatsapp"
+                      href="https://wa.me/919876543210?text=Hello%20there,%20Have%20a%20chat%20with%20us!"
+                    >
+                      <MessageCircle className="h-7 w-7" color="green" />
                       <span className="sr-only">Whatsapp</span>
-                    </Button>
+                    </Link>
                   </div>
                 </div>
               </div>

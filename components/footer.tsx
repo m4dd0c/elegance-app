@@ -18,14 +18,22 @@ export function Footer() {
               2010.
             </p>
             <div className="flex space-x-4">
-              <Button variant="ghost" size="icon">
-                <Instagram className="h-5 w-5" />
+              <Link
+                title="Instagram"
+                href="https://instagram.com/mahesh_art_interior"
+                target="_blank"
+              >
+                <Instagram className="h-7 w-7" color="purple" />
                 <span className="sr-only">Instagram</span>
-              </Button>
-              <Button variant="ghost" size="icon">
-                <MessageCircle className="h-5 w-5" />
+              </Link>
+              <Link
+                target="_blank"
+                title="Whatsapp"
+                href="https://wa.me/919876543210?text=Hello%20there,%20Have%20a%20chat%20with%20us!"
+              >
+                <MessageCircle className="h-7 w-7" color="green" />
                 <span className="sr-only">Whatsapp</span>
-              </Button>
+              </Link>
             </div>
           </div>
           <div>
