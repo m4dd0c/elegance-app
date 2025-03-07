@@ -11,6 +11,7 @@ import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { useToast } from "@/hooks/use-toast";
 import { Instagram, MessageCircle } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function ContactPage() {
   const { toast } = useToast();
@@ -241,33 +242,42 @@ export default function ContactPage() {
                 Experience our furniture in person at our flagship showroom.
               </p>
 
-              <div className="mt-8 aspect-square border h-full w-full overflow-hidden rounded-lg flex items-center justify-center p-8 text-center">
-                <div>
-                  <MapPin className="mx-auto h-12 w-12 text-muted-foreground" />
-                  <p className="mt-4 text-lg font-medium">
-                    123 Furniture Lane, Portland, OR 97205
-                  </p>
-                  <p className="mt-2 text-muted-foreground">
-                    Visit us to explore our handcrafted furniture in person.
-                  </p>
+              <div className="mt-8 aspect-square relative border h-full w-full overflow-hidden rounded-lg flex items-center justify-center text-center">
+                <Image
+                  src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80"
+                  alt="Modern living room with elegant furniture"
+                  height={400}
+                  width={400}
+                  className="absolute inset-0 object-cover h-full w-full"
+                />
+                <div className="z-10 grid place-items-center bg-gradient-to-r from-background/80 to-background/30 absolute inset-0">
+                  <div className="p-8">
+                    <MapPin className="mx-auto h-12 w-12 text-muted-foreground" />
+                    <p className="mt-4 text-lg font-medium">
+                      123 Furniture Lane, Portland, OR 97205
+                    </p>
+                    <p className="mt-2 text-muted-foreground">
+                      Visit us to explore our handcrafted furniture in person.
+                    </p>
 
-                  <div className="flex mx-auto w-fit my-4 space-x-5">
-                    <Link
-                      title="Instagram"
-                      href="https://instagram.com/mahesh_art_interior"
-                      target="_blank"
-                    >
-                      <Instagram className="h-7 w-7" color="purple" />
-                      <span className="sr-only">Instagram</span>
-                    </Link>
-                    <Link
-                      target="_blank"
-                      title="Whatsapp"
-                      href="https://wa.me/919876543210?text=Hello%20there,%20Have%20a%20chat%20with%20us!"
-                    >
-                      <MessageCircle className="h-7 w-7" color="green" />
-                      <span className="sr-only">Whatsapp</span>
-                    </Link>
+                    <div className="flex mx-auto w-fit my-4 space-x-5">
+                      <Link
+                        title="Instagram"
+                        href="https://instagram.com/mahesh_art_interior"
+                        target="_blank"
+                      >
+                        <Instagram className="h-7 w-7 text-purple-500" />
+                        <span className="sr-only">Instagram</span>
+                      </Link>
+                      <Link
+                        target="_blank"
+                        title="Whatsapp"
+                        href="https://wa.me/919876543210?text=Hello%20there,%20Have%20a%20chat%20with%20us!"
+                      >
+                        <MessageCircle className="h-7 w-7 text-green-500" />
+                        <span className="sr-only">Whatsapp</span>
+                      </Link>
+                    </div>
                   </div>
                 </div>
               </div>
