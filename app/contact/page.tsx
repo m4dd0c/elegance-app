@@ -272,7 +272,9 @@ export default function ContactPage() {
                       <Link
                         target="_blank"
                         title="Whatsapp"
-                        href="https://wa.me/919876543210?text=Hello%20there,%20Have%20a%20chat%20with%20us!"
+                        href={
+                          "https://api.whatsapp.com/send?phone=919166692200"
+                        }
                       >
                         <MessageCircle className="h-7 w-7 text-green-500" />
                         <span className="sr-only">Whatsapp</span>

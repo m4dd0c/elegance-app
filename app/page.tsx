@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+// import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import {
   Carousel,
   CarouselContent,
@@ -15,7 +15,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import { collections, products, testimonials } from "@/lib/constants/data";
+import { products, testimonials } from "@/lib/constants/data";
 import ProductCard from "@/components/cards/ProductCard";
 
 export default function Home() {
@@ -111,62 +111,62 @@ export default function Home() {
               in your home.
             </p>
           </div>
-          <Tabs defaultValue="living-room" className="w-full">
-            <TabsList className="mb-8 flex w-full justify-center space-x-2 overflow-x-auto">
-              {collections.map((collection) => (
-                <TabsTrigger
-                  key={collection.id}
-                  value={collection.id}
-                  className="px-4 max-sm:px-3 py-[6px]"
-                >
-                  {collection.name}
-                </TabsTrigger>
-              ))}
-            </TabsList>
-            {collections.map((collection) => (
-              <TabsContent
-                key={collection.id}
-                value={collection.id}
-                className="mt-0"
-              >
-                <div className="grid gap-8 md:grid-cols-2">
-                  <motion.div
-                    initial={{ opacity: 0, x: -20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.5 }}
-                    viewport={{ once: true }}
-                    className="relative aspect-square overflow-hidden rounded-lg md:aspect-auto md:h-[500px]"
-                  >
-                    <Image
-                      src={collection.image}
-                      alt={collection.name}
-                      fill
-                      className="object-cover"
-                    />
-                  </motion.div>
-                  <motion.div
-                    initial={{ opacity: 0, x: 20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.5, delay: 0.2 }}
-                    viewport={{ once: true }}
-                    className="flex flex-col justify-center"
-                  >
-                    <h3 className="font-playfair text-3xl font-bold">
-                      {collection.name} Collection
-                    </h3>
-                    <p className="mt-4 text-lg text-muted-foreground">
-                      {collection.description}
-                    </p>
-                    <Button className="mt-8" size="lg" asChild>
-                      <Link href={`/collections/${collection.id}`}>
-                        Explore Collection
-                      </Link>
-                    </Button>
-                  </motion.div>
-                </div>
-              </TabsContent>
-            ))}
-          </Tabs>
+          {/* <Tabs defaultValue="living-room" className="w-full"> */}
+          {/*   <TabsList className="mb-8 flex w-full justify-center space-x-2 overflow-x-auto"> */}
+          {/*     {collections.map((collection) => ( */}
+          {/*       <TabsTrigger */}
+          {/*         key={collection.id} */}
+          {/*         value={collection.id} */}
+          {/*         className="px-4 max-sm:px-3 py-[6px]" */}
+          {/*       > */}
+          {/*         {collection.name} */}
+          {/*       </TabsTrigger> */}
+          {/*     ))} */}
+          {/*   </TabsList> */}
+          {/*   {collections.map((collection) => ( */}
+          {/*     <TabsContent */}
+          {/*       key={collection.id} */}
+          {/*       value={collection.id} */}
+          {/*       className="mt-0" */}
+          {/*     > */}
+          {/*       <div className="grid gap-8 md:grid-cols-2"> */}
+          {/*         <motion.div */}
+          {/*           initial={{ opacity: 0, x: -20 }} */}
+          {/*           whileInView={{ opacity: 1, x: 0 }} */}
+          {/*           transition={{ duration: 0.5 }} */}
+          {/*           viewport={{ once: true }} */}
+          {/*           className="relative aspect-square overflow-hidden rounded-lg md:aspect-auto md:h-[500px]" */}
+          {/*         > */}
+          {/*           <Image */}
+          {/*             src={collection.image} */}
+          {/*             alt={collection.name} */}
+          {/*             fill */}
+          {/*             className="object-cover" */}
+          {/*           /> */}
+          {/*         </motion.div> */}
+          {/*         <motion.div */}
+          {/*           initial={{ opacity: 0, x: 20 }} */}
+          {/*           whileInView={{ opacity: 1, x: 0 }} */}
+          {/*           transition={{ duration: 0.5, delay: 0.2 }} */}
+          {/*           viewport={{ once: true }} */}
+          {/*           className="flex flex-col justify-center" */}
+          {/*         > */}
+          {/*           <h3 className="font-playfair text-3xl font-bold"> */}
+          {/*             {collection.name} Collection */}
+          {/*           </h3> */}
+          {/*           <p className="mt-4 text-lg text-muted-foreground"> */}
+          {/*             {collection.description} */}
+          {/*           </p> */}
+          {/*           <Button className="mt-8" size="lg" asChild> */}
+          {/*             <Link href={`/collections/${collection.id}`}> */}
+          {/*               Explore Collection */}
+          {/*             </Link> */}
+          {/*           </Button> */}
+          {/*         </motion.div> */}
+          {/*       </div> */}
+          {/*     </TabsContent> */}
+          {/*   ))} */}
+          {/* </Tabs> */}
         </div>
       </section>
 

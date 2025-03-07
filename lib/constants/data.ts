@@ -1,136 +1,171 @@
-// featured data
-export const products = [
+import { iProduct } from "@/types";
+
+// Featured data
+export const products: iProduct[] = [
   {
     id: "1",
     name: "Serene Lounge Chair",
     category: "Chairs",
-    image:
-      "https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    image: [
+      "https://images.unsplash.com/photo-1567538096630-e0c55bd6374c",
+      "https://images.unsplash.com/photo-1615874959474-0c338c5b7d9a",
+      "https://images.unsplash.com/photo-1615874959861-b3b7d8f4a5ad",
+    ],
     featured: true,
+    description:
+      "A handcrafted lounge chair designed for comfort and elegance.",
+    material: "Premium quality wood, brass fittings",
+    length: "30",
+    width: "20",
+    height: "15",
+    weight: "1.5",
+    instruction: "Wipe clean with a soft, dry cloth",
   },
   {
     id: "2",
     name: "Harmony Dining Table",
     category: "Tables",
-    image:
-      "https://images.unsplash.com/photo-1577140917170-285929fb55b7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    image: [
+      "https://images.unsplash.com/photo-1577140917170-285929fb55b7",
+      "https://images.unsplash.com/photo-1519710164239-da123dc03ef4",
+      "https://images.unsplash.com/photo-1567538096630-e0c55bd6374c",
+    ],
     featured: true,
+    description:
+      "A spacious and stylish dining table, perfect for family gatherings.",
+    material: "Solid oak wood, metal legs",
+    length: "72",
+    width: "36",
+    height: "30",
+    weight: "25",
+    instruction: "Wipe with a damp cloth, avoid harsh chemicals",
   },
   {
     id: "3",
     name: "Tranquil Sofa",
     category: "Sofas",
-    image:
-      "https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    image: [
+      "https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e",
+      "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267",
+      "https://images.unsplash.com/photo-1618215923561-3a1f9a48569c",
+    ],
     featured: true,
+    description: "A plush and cozy sofa designed for comfort and style.",
+    material: "High-density foam, velvet upholstery",
+    length: "80",
+    width: "35",
+    height: "32",
+    weight: "40",
+    instruction: "Vacuum regularly, professional cleaning recommended",
   },
   {
     id: "4",
     name: "Elegance Bookshelf",
     category: "Storage",
-    image:
-      "https://images.unsplash.com/photo-1594026112284-02bb6f3352fe?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    image: [
+      "https://images.unsplash.com/photo-1594026112284-02bb6f3352fe",
+      "https://images.unsplash.com/photo-1585121815768-44d1792c332e",
+      "https://images.unsplash.com/photo-1567016432779-094069958ea2",
+    ],
     featured: true,
+    description:
+      "A stylish bookshelf with ample space for books and decor items.",
+    material: "Engineered wood, matte finish",
+    length: "36",
+    width: "12",
+    height: "72",
+    weight: "20",
+    instruction: "Dust regularly, avoid exposure to moisture",
   },
   {
     id: "5",
     name: "Minimalist Coffee Table",
     category: "Tables",
-    image:
-      "https://images.unsplash.com/photo-1532372320572-cda25653a694?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    image: [
+      "https://images.unsplash.com/photo-1532372320572-cda25653a694",
+      "https://images.unsplash.com/photo-1555041469-a586c61ea9bc",
+      "https://images.unsplash.com/photo-1600565193348-30ec3b1af3d8",
+    ],
     featured: false,
+    description: "A modern coffee table that complements any interior design.",
+    material: "Tempered glass, steel frame",
+    length: "42",
+    width: "22",
+    height: "18",
+    weight: "12",
+    instruction: "Clean with a soft cloth, avoid sharp objects",
   },
   {
     id: "6",
     name: "Comfort Sectional Sofa",
     category: "Sofas",
-    image:
-      "https://images.unsplash.com/photo-1540574163026-643ea20ade25?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    image: [
+      "https://images.unsplash.com/photo-1540574163026-643ea20ade25",
+      "https://images.unsplash.com/photo-1617042377245-e6d5b3a19a30",
+      "https://images.unsplash.com/photo-1604072366920-d7b4b2e02e92",
+    ],
     featured: false,
+    description: "A spacious sectional sofa designed for maximum comfort.",
+    material: "Fabric upholstery, wooden frame",
+    length: "90",
+    width: "40",
+    height: "34",
+    weight: "50",
+    instruction: "Spot clean stains, avoid direct sunlight",
   },
   {
     id: "7",
     name: "Elegant Dining Chairs (Set of 4)",
     category: "Chairs",
-    image:
-      "https://images.unsplash.com/photo-1595428774223-ef52624120d2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    image: [
+      "https://images.unsplash.com/photo-1595428774223-ef52624120d2",
+      "https://images.unsplash.com/photo-1578683010237-2eb398b09a12",
+      "https://images.unsplash.com/photo-1550583724-b2692b85b150",
+    ],
     featured: false,
+    description: "A set of stylish dining chairs with ergonomic back support.",
+    material: "Solid wood, cushioned seat",
+    length: "18",
+    width: "20",
+    height: "36",
+    weight: "8",
+    instruction: "Wipe clean with a soft, dry cloth",
   },
   {
     id: "8",
     name: "Modern Desk",
     category: "Office",
-    image:
-      "https://images.unsplash.com/photo-1518455027359-f3f8164ba6bd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    image: [
+      "https://images.unsplash.com/photo-1518455027359-f3f8164ba6bd",
+      "https://images.unsplash.com/photo-1593642634367-d91a135587b5",
+      "https://images.unsplash.com/photo-1571068313793-9315185ac72e",
+    ],
     featured: false,
+    description: "A sleek office desk with ample workspace and storage.",
+    material: "Engineered wood, metal legs",
+    length: "48",
+    width: "24",
+    height: "30",
+    weight: "22",
+    instruction: "Dust regularly, wipe with a damp cloth",
   },
   {
     id: "9",
     name: "Plush Accent Chair",
     category: "Chairs",
-    image:
-      "https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    image: [
+      "https://images.unsplash.com/photo-1598300042247-d088f8ab3a91",
+      "https://images.unsplash.com/photo-1593661056323-b2a32dc3b00d",
+      "https://images.unsplash.com/photo-1582560478111-98b36d321e60",
+    ],
     featured: false,
-  },
-  {
-    id: "10",
-    name: "Versatile Storage Cabinet",
-    category: "Storage",
-    image:
-      "https://images.unsplash.com/photo-1595428774223-ef52624120d2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-    featured: false,
-  },
-  {
-    id: "11",
-    name: "Cozy Bed Frame",
-    category: "Bedroom",
-    image:
-      "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-    featured: false,
-  },
-  {
-    id: "12",
-    name: "Sleek TV Stand",
-    category: "Storage",
-    image:
-      "https://images.unsplash.com/photo-1581539250439-c96689b516dd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-    featured: false,
-  },
-];
-
-// Collections data
-export const collections = [
-  {
-    id: "living-room",
-    name: "Living Room",
-    description:
-      "Create a space that reflects your style with our curated living room collection.",
-    image:
-      "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-  },
-  {
-    id: "bedroom",
-    name: "Bedroom",
-    description:
-      "Transform your bedroom into a peaceful sanctuary with our elegant furniture.",
-    image:
-      "https://images.unsplash.com/photo-1588046130717-0eb0c9a3ba15?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-  },
-  {
-    id: "dining",
-    name: "Dining",
-    description:
-      "Elevate your dining experience with our sophisticated dining furniture.",
-    image:
-      "https://images.unsplash.com/photo-1617806118233-18e1de247200?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-  },
-  {
-    id: "office",
-    name: "Office",
-    description:
-      "Create a productive workspace with our stylish and functional office furniture.",
-    image:
-      "https://images.unsplash.com/photo-1593642532744-d377ab507dc8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    description: "A cozy accent chair to add charm to any space.",
+    material: "Velvet fabric, wooden legs",
+    length: "28",
+    width: "26",
+    height: "32",
+    weight: "10",
+    instruction: "Vacuum regularly, avoid water spills",
   },
 ];
 

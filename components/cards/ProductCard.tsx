@@ -3,14 +3,7 @@ import Link from "next/link";
 import fallback from "@/assets/fallback.png";
 import { motion } from "framer-motion";
 import Image from "next/image";
-
-interface iProduct {
-  id: string;
-  name: string;
-  image: string;
-  category: string;
-  featured: boolean;
-}
+import { iProduct } from "@/types";
 
 const ProductCard = ({
   product,
@@ -30,7 +23,7 @@ const ProductCard = ({
       <Link href={`/products/${product?.id}`} className="overflow-hidden">
         <div className="aspect-square relative overflow-hidden">
           <Image
-            src={product?.image ?? fallback}
+            src={product?.image?.[0] ?? fallback}
             alt={product?.name ?? "product-image"}
             fill
             className="object-cover transition-transform hover:scale-105"
