@@ -130,12 +130,13 @@ export default function ContactPage() {
       {/* Contact Form and Map */}
       <section className="bg-muted/30 py-16 md:py-24">
         <div className="container mx-auto px-4 md:px-6">
-          <div className="grid gap-12 md:grid-cols-2">
+          <div className="flex gap-12 flex-row max-md:flex-col">
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5 }}
               viewport={{ once: true }}
+              className="w-full"
             >
               <h2 className="font-playfair text-2xl font-bold md:text-3xl">
                 Send Us a Message
@@ -155,6 +156,7 @@ export default function ContactPage() {
                       onChange={handleChange}
                       placeholder="Your name"
                       required
+                      className="w-full"
                     />
                   </div>
                   <div className="grid gap-4 sm:grid-cols-2">
@@ -220,7 +222,7 @@ export default function ContactPage() {
                     />
                   </div>
                 </div>
-                <Button type="submit" className="w-full">
+                <Button type="submit">
                   <Send className="mr-2 h-4 w-4" /> Send Message
                 </Button>
               </form>
@@ -230,7 +232,7 @@ export default function ContactPage() {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
               viewport={{ once: true }}
-              className="flex flex-col"
+              className="flex flex-col w-full"
             >
               <h2 className="font-playfair text-2xl font-bold md:text-3xl">
                 Visit Our Showroom
@@ -239,7 +241,7 @@ export default function ContactPage() {
                 Experience our furniture in person at our flagship showroom.
               </p>
 
-              <div className="mt-8 aspect-square h-full w-full overflow-hidden rounded-lg border flex items-center justify-center p-8 text-center">
+              <div className="mt-8 aspect-square border h-full w-full overflow-hidden rounded-lg flex items-center justify-center p-8 text-center">
                 <div>
                   <MapPin className="mx-auto h-12 w-12 text-muted-foreground" />
                   <p className="mt-4 text-lg font-medium">
