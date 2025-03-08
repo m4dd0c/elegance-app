@@ -7,7 +7,6 @@ import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import fallback from "@/assets/fallback.png";
 import {
   Carousel,
   CarouselContent,
