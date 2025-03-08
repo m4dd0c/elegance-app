@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-// import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import fallback from "@/assets/fallback.png";
 import {
   Carousel,
   CarouselContent,
@@ -111,62 +111,61 @@ export default function Home() {
               in your home.
             </p>
           </div>
-          {/* <Tabs defaultValue="living-room" className="w-full"> */}
-          {/*   <TabsList className="mb-8 flex w-full justify-center space-x-2 overflow-x-auto"> */}
-          {/*     {collections.map((collection) => ( */}
-          {/*       <TabsTrigger */}
-          {/*         key={collection.id} */}
-          {/*         value={collection.id} */}
-          {/*         className="px-4 max-sm:px-3 py-[6px]" */}
-          {/*       > */}
-          {/*         {collection.name} */}
-          {/*       </TabsTrigger> */}
-          {/*     ))} */}
-          {/*   </TabsList> */}
-          {/*   {collections.map((collection) => ( */}
-          {/*     <TabsContent */}
-          {/*       key={collection.id} */}
-          {/*       value={collection.id} */}
-          {/*       className="mt-0" */}
-          {/*     > */}
-          {/*       <div className="grid gap-8 md:grid-cols-2"> */}
-          {/*         <motion.div */}
-          {/*           initial={{ opacity: 0, x: -20 }} */}
-          {/*           whileInView={{ opacity: 1, x: 0 }} */}
-          {/*           transition={{ duration: 0.5 }} */}
-          {/*           viewport={{ once: true }} */}
-          {/*           className="relative aspect-square overflow-hidden rounded-lg md:aspect-auto md:h-[500px]" */}
-          {/*         > */}
-          {/*           <Image */}
-          {/*             src={collection.image} */}
-          {/*             alt={collection.name} */}
-          {/*             fill */}
-          {/*             className="object-cover" */}
-          {/*           /> */}
-          {/*         </motion.div> */}
-          {/*         <motion.div */}
-          {/*           initial={{ opacity: 0, x: 20 }} */}
-          {/*           whileInView={{ opacity: 1, x: 0 }} */}
-          {/*           transition={{ duration: 0.5, delay: 0.2 }} */}
-          {/*           viewport={{ once: true }} */}
-          {/*           className="flex flex-col justify-center" */}
-          {/*         > */}
-          {/*           <h3 className="font-playfair text-3xl font-bold"> */}
-          {/*             {collection.name} Collection */}
-          {/*           </h3> */}
-          {/*           <p className="mt-4 text-lg text-muted-foreground"> */}
-          {/*             {collection.description} */}
-          {/*           </p> */}
-          {/*           <Button className="mt-8" size="lg" asChild> */}
-          {/*             <Link href={`/collections/${collection.id}`}> */}
-          {/*               Explore Collection */}
-          {/*             </Link> */}
-          {/*           </Button> */}
-          {/*         </motion.div> */}
-          {/*       </div> */}
-          {/*     </TabsContent> */}
-          {/*   ))} */}
-          {/* </Tabs> */}
+          <div className="w-full h-full space-y-2">
+            <div className="grid gap-2 grid-cols-2 max-sm:grid-cols-1">
+              <div className="h-full w-full">
+                <div>
+                  <Image
+                    src="https://images.unsplash.com/photo-1540574163026-643ea20ade25?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    alt="image-1"
+                    height={1080}
+                    width={1080}
+                    className="h-96 w-full object-cover"
+                  />
+                </div>
+              </div>
+              <div className="h-full w-full">
+                <div className="sm:rounded-tr-[4rem] overflow-hidden">
+                  <Image
+                    src="https://images.unsplash.com/photo-1630585308572-f53438fc684f?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fHNvZmF8ZW58MHx8MHx8fDA%3D"
+                    alt="image-2"
+                    height={1080}
+                    width={1080}
+                    className="h-96 w-full object-cover"
+                  />
+                </div>
+              </div>
+            </div>
+            <div className="grid gap-2 grid-cols-3 max-sm:grid-cols-1">
+              <div className="h-full w-full sm:rounded-bl-[4rem] overflow-hidden">
+                <Image
+                  src="https://media.istockphoto.com/id/1350669614/photo/antique-old-chair.webp?a=1&b=1&s=612x612&w=0&k=20&c=UH9uxLH8R-Dhlw6vvcC8dgQUsAPKbjX2k4QBu1031Sg="
+                  alt="image-2"
+                  height={1080}
+                  width={1080}
+                  className="h-96 w-full object-cover"
+                />
+              </div>
+              <div className="h-full w-full">
+                <Image
+                  src="https://media.istockphoto.com/id/1194969834/photo/royal-throne-isolated-on-white-3d-render.webp?a=1&b=1&s=612x612&w=0&k=20&c=rTWKY5KWAIhNLiL24hC0RVqebVYoLy_Og3pN-sa1acI="
+                  alt="image-2"
+                  height={1080}
+                  width={1080}
+                  className="h-96 w-full object-cover"
+                />
+              </div>
+              <div className="h-full w-full">
+                <Image
+                  src="https://images.unsplash.com/photo-1642615500460-fc4500f50c95?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fHNpbHZlciUyMGNoYWlyfGVufDB8fDB8fHww"
+                  alt="image-2"
+                  height={1080}
+                  width={1080}
+                  className="h-96 w-full object-cover"
+                />
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
