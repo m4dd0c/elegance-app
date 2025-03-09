@@ -87,7 +87,11 @@ export default function ContactPage() {
               {
                 icon: <MapPin className="h-6 w-6" />,
                 title: "Visit Us",
-                details: ["123 Furniture Lane", "Portland, OR 97205"],
+                details: [
+                  "100 Fit, Sobhagpura Meera Nagar ",
+                  "Near Parmanand Garden Udaipur Raj.",
+                  "Zipcode: 313001",
+                ],
               },
               {
                 icon: <Phone className="h-6 w-6" />,
@@ -243,45 +247,11 @@ export default function ContactPage() {
               </p>
 
               <div className="mt-8 aspect-square relative border h-full w-full overflow-hidden rounded-lg flex items-center justify-center text-center">
-                <Image
-                  src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80"
-                  alt="Modern living room with elegant furniture"
-                  height={400}
-                  width={400}
-                  className="absolute inset-0 object-cover h-full w-full"
-                />
-                <div className="z-10 grid place-items-center bg-gradient-to-r from-background/80 to-background/30 absolute inset-0">
-                  <div className="p-8">
-                    <MapPin className="mx-auto h-12 w-12 text-muted-foreground" />
-                    <p className="mt-4 text-lg font-medium">
-                      123 Furniture Lane, Portland, OR 97205
-                    </p>
-                    <p className="mt-2 text-muted-foreground">
-                      Visit us to explore our handcrafted furniture in person.
-                    </p>
-
-                    <div className="flex mx-auto w-fit my-4 space-x-5">
-                      <Link
-                        title="Instagram"
-                        href="https://instagram.com/mahesh_art_interior"
-                        target="_blank"
-                      >
-                        <Instagram className="h-7 w-7 text-purple-500" />
-                        <span className="sr-only">Instagram</span>
-                      </Link>
-                      <Link
-                        target="_blank"
-                        title="Whatsapp"
-                        href={
-                          "https://api.whatsapp.com/send?phone=919166692200"
-                        }
-                      >
-                        <MessageCircle className="h-7 w-7 text-green-500" />
-                        <span className="sr-only">Whatsapp</span>
-                      </Link>
-                    </div>
-                  </div>
-                </div>
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d1813.638927318461!2d73.70871041578906!3d24.61410660000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1s100%20fit%2C%20sobhagpura%20meera%20nagar%2C%20near%20parmanand%20garden!5e0!3m2!1sen!2sin!4v1741507904025!5m2!1sen!2sin"
+                  loading="lazy"
+                  className="w-full h-full"
+                ></iframe>
               </div>
             </motion.div>
           </div>
