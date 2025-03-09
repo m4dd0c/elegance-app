@@ -1,9 +1,9 @@
 import React from "react";
 import Link from "next/link";
-import fallback from "@/assets/fallback.png";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { iProduct } from "@/types";
+import fallback from "@/public/assets/fallback.png";
 
 const ProductCard = ({
   product,
@@ -25,6 +25,7 @@ const ProductCard = ({
           <Image
             src={product?.image?.[0] ?? fallback}
             alt={product?.name ?? "product-image"}
+            quality={30}
             fill
             className="object-cover transition-transform hover:scale-105"
           />

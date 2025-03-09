@@ -9,9 +9,6 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { useToast } from "@/hooks/use-toast";
-import { Instagram, MessageCircle } from "lucide-react";
-import Link from "next/link";
-import Image from "next/image";
 
 export default function ContactPage() {
   const { toast } = useToast();

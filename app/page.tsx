@@ -16,6 +16,11 @@ import {
 } from "@/components/ui/carousel";
 import { products, testimonials } from "@/lib/constants/data";
 import ProductCard from "@/components/cards/ProductCard";
+import sofa1 from "@/public/assets/products/sofa-1.jpg";
+import sofa2 from "@/public/assets/products/sofa-2.jpg";
+import mirrorA1 from "@/public/assets/products/mirror-a1.jpg";
+import mirrorB1 from "@/public/assets/products/mirror-b1.jpg";
+import table1 from "@/public/assets/products/table-1.jpg";
 
 export default function Home() {
   const [mounted, setMounted] = useState(false);
@@ -115,7 +120,7 @@ export default function Home() {
               <div className="h-full w-full">
                 <div>
                   <Image
-                    src="https://images.unsplash.com/photo-1540574163026-643ea20ade25?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    src={sofa2}
                     alt="image-1"
                     height={1080}
                     width={1080}
@@ -126,7 +131,7 @@ export default function Home() {
               <div className="h-full w-full">
                 <div className="sm:rounded-tr-[4rem] overflow-hidden">
                   <Image
-                    src="https://images.unsplash.com/photo-1630585308572-f53438fc684f?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fHNvZmF8ZW58MHx8MHx8fDA%3D"
+                    src={sofa1}
                     alt="image-2"
                     height={1080}
                     width={1080}
@@ -138,7 +143,7 @@ export default function Home() {
             <div className="grid gap-2 grid-cols-3 max-sm:grid-cols-1">
               <div className="h-full w-full sm:rounded-bl-[4rem] overflow-hidden">
                 <Image
-                  src="https://media.istockphoto.com/id/1350669614/photo/antique-old-chair.webp?a=1&b=1&s=612x612&w=0&k=20&c=UH9uxLH8R-Dhlw6vvcC8dgQUsAPKbjX2k4QBu1031Sg="
+                  src={table1}
                   alt="image-2"
                   height={1080}
                   width={1080}
@@ -147,7 +152,7 @@ export default function Home() {
               </div>
               <div className="h-full w-full">
                 <Image
-                  src="https://media.istockphoto.com/id/1194969834/photo/royal-throne-isolated-on-white-3d-render.webp?a=1&b=1&s=612x612&w=0&k=20&c=rTWKY5KWAIhNLiL24hC0RVqebVYoLy_Og3pN-sa1acI="
+                  src={mirrorA1}
                   alt="image-2"
                   height={1080}
                   width={1080}
@@ -156,7 +161,7 @@ export default function Home() {
               </div>
               <div className="h-full w-full">
                 <Image
-                  src="https://images.unsplash.com/photo-1642615500460-fc4500f50c95?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fHNpbHZlciUyMGNoYWlyfGVufDB8fDB8fHww"
+                  src={mirrorB1}
                   alt="image-2"
                   height={1080}
                   width={1080}

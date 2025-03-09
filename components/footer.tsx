@@ -3,7 +3,7 @@ import Link from "next/link";
 import { Instagram, MessageCircle } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
 import Image from "next/image";
-import logo from "@/assets/logo.png";
+import logo from "@/public/assets/logo.png";
 
 export function Footer() {
   return (

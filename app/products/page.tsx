@@ -10,15 +10,7 @@ import { products } from "@/lib/constants/data";
 
 // Product data
 // Categories
-const categories = [
-  "All",
-  "Chairs",
-  "Tables",
-  "Sofas",
-  "Storage",
-  "Bedroom",
-  "Office",
-];
+const categories = ["All", "Chairs", "Tables", "Sofas", "Mirrors", "Bedroom"];
 
 export default function ProductsPage() {
   const [searchQuery, setSearchQuery] = useState("");
