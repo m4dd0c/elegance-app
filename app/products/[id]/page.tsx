@@ -36,7 +36,7 @@ export default function ProductDetail({ params }: { params: { id: string } }) {
               src={product?.image[selectedImage]}
               alt={product?.name}
               fill
-              className="object-cover"
+              className="object-contain"
               priority
             />
           </motion.div>

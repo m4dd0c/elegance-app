@@ -16,11 +16,6 @@ import {
 } from "@/components/ui/carousel";
 import { products, testimonials } from "@/lib/constants/data";
 import ProductCard from "@/components/cards/ProductCard";
-import sofa1 from "@/public/assets/products/sofa-1.jpg";
-import sofa2 from "@/public/assets/products/sofa-2.jpg";
-import mirrorA1 from "@/public/assets/products/mirror-a1.jpg";
-import mirrorB1 from "@/public/assets/products/mirror-b1.jpg";
-import table1 from "@/public/assets/products/table-1.jpg";
 
 export default function Home() {
   const [mounted, setMounted] = useState(false);
@@ -120,7 +115,9 @@ export default function Home() {
               <div className="h-full w-full">
                 <div>
                   <Image
-                    src={sofa2}
+                    src={
+                      "https://res.cloudinary.com/dgdbctcqt/image/upload/v1741683215/dine-3_c10aju.jpg"
+                    }
                     alt="image-1"
                     height={1080}
                     width={1080}
@@ -131,7 +128,9 @@ export default function Home() {
               <div className="h-full w-full">
                 <div className="sm:rounded-tr-[4rem] overflow-hidden">
                   <Image
-                    src={sofa1}
+                    src={
+                      "https://res.cloudinary.com/dgdbctcqt/image/upload/v1741683259/sofa-d_jq2vhz.jpg"
+                    }
                     alt="image-2"
                     height={1080}
                     width={1080}
@@ -143,7 +142,9 @@ export default function Home() {
             <div className="grid gap-2 grid-cols-3 max-sm:grid-cols-1">
               <div className="h-full w-full sm:rounded-bl-[4rem] overflow-hidden">
                 <Image
-                  src={table1}
+                  src={
+                    "https://res.cloudinary.com/dgdbctcqt/image/upload/v1741683151/chair-f_ucek1e.jpg"
+                  }
                   alt="image-2"
                   height={1080}
                   width={1080}
@@ -152,7 +153,9 @@ export default function Home() {
               </div>
               <div className="h-full w-full">
                 <Image
-                  src={mirrorA1}
+                  src={
+                    "https://res.cloudinary.com/dgdbctcqt/image/upload/v1741683262/mirror-a3_b137cp.jpg"
+                  }
                   alt="image-2"
                   height={1080}
                   width={1080}
@@ -161,7 +164,9 @@ export default function Home() {
               </div>
               <div className="h-full w-full">
                 <Image
-                  src={mirrorB1}
+                  src={
+                    "https://res.cloudinary.com/dgdbctcqt/image/upload/v1741683197/chair-a2_qlna8j.jpg"
+                  }
                   alt="image-2"
                   height={1080}
                   width={1080}
