@@ -516,7 +516,7 @@ export const products: iProduct[] = [
     image: [
       "https://res.cloudinary.com/dgdbctcqt/image/upload/v1741684896/table-d_jsovx0.jpg",
     ],
-    featured: true,
+    featured: false,
     description:
       "A beautifully designed round silver-coated chair with a luxurious feel.",
     material: "Solid Wood and Silver",
