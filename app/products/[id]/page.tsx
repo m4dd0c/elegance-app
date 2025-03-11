@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect, useMemo } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { MessageCircle } from "lucide-react";
@@ -17,11 +17,21 @@ import Link from "next/link";
 
 export default function ProductDetail({ params }: { params: { id: string } }) {
   const [selectedImage, setSelectedImage] = useState(0);
+  const [currentUrl, setCurrentUrl] = useState("");
 
-  // In a real application, you would fetch this data from an API
-  const product = products.find((p) => p.id === params.id) || products[0];
+  // Memoized product lookup
+  const product = useMemo(
+    () => products.find((p) => p.id === params.id) || products[0],
+    [params.id],
+  );
 
-  const url = window.location.href;
+  // Ensure we get the correct URL after mounting
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      setCurrentUrl(window.location.href);
+    }
+  }, []);
+
   return (
     <div className="container mx-auto px-4 pt-28 pb-8 md:pb-12">
       <div className="grid gap-8 md:grid-cols-2">
@@ -33,15 +43,15 @@ export default function ProductDetail({ params }: { params: { id: string } }) {
             className="relative aspect-square overflow-hidden rounded-lg"
           >
             <Image
-              src={product?.image[selectedImage]}
-              alt={product?.name}
+              src={product.image[selectedImage]}
+              alt={product.name}
               fill
               className="object-contain"
               priority
             />
           </motion.div>
           <div className="grid grid-cols-4 gap-4">
-            {product?.image?.map((image, index) => (
+            {product.image.map((image, index) => (
               <button
                 key={index}
                 onClick={() => setSelectedImage(index)}
@@ -53,7 +63,7 @@ export default function ProductDetail({ params }: { params: { id: string } }) {
               >
                 <Image
                   src={image}
-                  alt={`${product?.name} view ${index + 1}`}
+                  alt={`${product.name} view ${index + 1}`}
                   fill
                   className="object-cover"
                 />
@@ -65,15 +75,15 @@ export default function ProductDetail({ params }: { params: { id: string } }) {
         {/* Product Info */}
         <div className="space-y-6">
           <h1 className="font-playfair text-3xl font-bold md:text-4xl">
-            {product?.name}
+            {product.name}
           </h1>
 
           <div className="space-y-4">
             <h3 className="font-semibold">Description</h3>
-            <p className="text-muted-foreground">{product?.description}</p>
+            <p className="text-muted-foreground">{product.description}</p>
           </div>
 
-          {/* Product Details Tabs */}
+          {/* Product Specifications */}
           <Card>
             <CardHeader>
               <CardTitle>Product Specifications</CardTitle>
@@ -85,38 +95,38 @@ export default function ProductDetail({ params }: { params: { id: string } }) {
               <div className="grid gap-4 md:grid-cols-2">
                 <div>
                   <h4 className="font-semibold">Materials</h4>
-                  <p className="text-muted-foreground">{product?.material}</p>
+                  <p className="text-muted-foreground">{product.material}</p>
                 </div>
                 <div>
                   <h4 className="font-semibold">Dimensions</h4>
                   <p className="text-muted-foreground">
-                    L: {product?.length}cm x W: {product?.width}cm x H:{" "}
-                    {product?.height}cm
+                    L: {product.length}cm x W: {product.width}cm x H:{" "}
+                    {product.height}cm
                   </p>
                 </div>
                 <div>
                   <h4 className="font-semibold">Weight</h4>
-                  <p className="text-muted-foreground">{product?.weight} kg</p>
+                  <p className="text-muted-foreground">{product.weight} kg</p>
                 </div>
                 <div>
                   <h4 className="font-semibold">Care Instructions</h4>
-                  <p className="text-muted-foreground">
-                    {product?.instruction}
-                  </p>
+                  <p className="text-muted-foreground">{product.instruction}</p>
                 </div>
               </div>
             </CardContent>
           </Card>
+
+          {/* Enquiry Button */}
           <div className="flex flex-wrap gap-4">
             <Button className="flex-1 gap-2" asChild>
               <Link
                 target="_blank"
                 href={`https://api.whatsapp.com/send?phone=919166692200&text=${encodeURIComponent(
-                  `Hey, I want to make a query about the product (${url})`,
+                  `Hey, I want to make a query about the product (${currentUrl})`,
                 )}`}
               >
                 <MessageCircle className="h-7 w-7 text-green-500" />
-                <h1>Make an Enquiry</h1>
+                <span>Make an Enquiry</span>
               </Link>
             </Button>
           </div>

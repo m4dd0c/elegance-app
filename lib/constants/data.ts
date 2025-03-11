@@ -409,16 +409,15 @@ export const products: iProduct[] = [
   },
   {
     id: "24",
-    name: "Royal Serving Table",
-    category: "Tables",
+    name: "Royal Table like Sofa",
+    category: "Sofas",
     image: [
-      "https://res.cloudinary.com/dgdbctcqt/image/upload/v1741683228/dine-2_uqjqwz.jpg",
-      "https://res.cloudinary.com/dgdbctcqt/image/upload/v1741683215/dine-3_c10aju.jpg",
+      "https://res.cloudinary.com/dgdbctcqt/image/upload/v1741683263/sofa-f_ch0wy9.jpg",
     ],
     featured: false,
     description:
-      "A royal serving table with silver coating that complements interior.",
-    material: "Solid Wood and Silver",
+      "A royal table like sofa with brass coating that complements interior.",
+    material: "Solid Wood and Brass",
     length: "42",
     width: "22",
     height: "18",
