@@ -7,11 +7,11 @@ export const products: iProduct[] = [
     name: "Wooden Comfortable Chair",
     category: "Chairs",
     image: [
-      "/assets/products/chair-1.jpg",
-      "/assets/products/chair-2.jpg",
-      "/assets/products/chair-3.jpg",
-      "/assets/products/chair-4.jpg",
-      "/assets/products/chair-5.jpg",
+      "https://res.cloudinary.com/dgdbctcqt/image/upload/v1741683181/chair-1_sxh2l0.jpg",
+      "https://res.cloudinary.com/dgdbctcqt/image/upload/v1741683178/chair-2_k7uz30.jpg",
+      "https://res.cloudinary.com/dgdbctcqt/image/upload/v1741683176/chair-4_mxgd84.jpg",
+      "https://res.cloudinary.com/dgdbctcqt/image/upload/v1741683162/chair-3_xsadvm.jpg",
+      "https://res.cloudinary.com/dgdbctcqt/image/upload/v1741683198/chair-5_qktuwf.jpg",
     ],
     featured: false,
     description:
@@ -27,7 +27,7 @@ export const products: iProduct[] = [
     id: "2",
     name: "White Wooden Chair",
     category: "Chairs",
-    image: ["/assets/products/chair-a1.jpg", "/assets/products/chair-a2.jpg"],
+    image: ["https://res.cloudinary.com/dgdbctcqt/image/upload/v1741683197/chair-a2_qlna8j.jpg", "https://res.cloudinary.com/dgdbctcqt/image/upload/v1741683186/chair-a1_nvnssd.jpg"],
     featured: true,
     description:
       "A White stylish wooden chair, Highly comfortable sheet with arm rest.",
@@ -42,7 +42,7 @@ export const products: iProduct[] = [
     id: "3",
     name: "Tranquil Sofa",
     category: "Sofas",
-    image: ["/assets/products/sofa-2.jpg", "/assets/products/sofa-1.jpg"],
+    image: ["https://res.cloudinary.com/dgdbctcqt/image/upload/v1741683262/sofa-1_giurdw.jpg", "https://res.cloudinary.com/dgdbctcqt/image/upload/v1741683277/sofa-2_q1uer7.jpg"],
     featured: true,
     description: "A plush and cozy sofa designed for comfort and style.",
     material: "High-density foam, velvet upholstery",
@@ -54,12 +54,12 @@ export const products: iProduct[] = [
   },
   {
     id: "4",
-    name: "Elegance Golden Mirror",
+    name: "Elegant Golden Mirror",
     category: "Mirrors",
     image: [
-      "/assets/products/mirror-1.jpg",
-      "/assets/products/mirror-2.jpg",
-      "/assets/products/mirror-3.jpg",
+      "https://res.cloudinary.com/dgdbctcqt/image/upload/v1741683242/mirror-3_k9rqq7.jpg",
+      "https://res.cloudinary.com/dgdbctcqt/image/upload/v1741683229/mirror-1_iezvk8.jpg",
+      "https://res.cloudinary.com/dgdbctcqt/image/upload/v1741683234/mirror-2_tet118.jpg",
     ],
     featured: true,
     description: "A stylish mirror with lower table space for items.",
@@ -75,9 +75,9 @@ export const products: iProduct[] = [
     name: "Royal Coffee Table, Sofa, and Chairs",
     category: "Tables",
     image: [
-      "/assets/products/dine-1.jpg",
-      "/assets/products/dine-2.jpg",
-      "/assets/products/dine-3.jpg",
+      "https://res.cloudinary.com/dgdbctcqt/image/upload/v1741683228/dine-2_uqjqwz.jpg",
+      "https://res.cloudinary.com/dgdbctcqt/image/upload/v1741683215/dine-1_ioteh5.jpg",
+      "https://res.cloudinary.com/dgdbctcqt/image/upload/v1741683215/dine-3_c10aju.jpg",
     ],
     featured: false,
     description:
@@ -93,7 +93,7 @@ export const products: iProduct[] = [
     id: "6",
     name: "Designed Mirror",
     category: "Mirrors",
-    image: ["/assets/products/mirror-b1.jpg"],
+    image: ["https://res.cloudinary.com/dgdbctcqt/image/upload/v1741683261/mirror-b1_n0fren.jpg"],
     featured: false,
     description: "Silver fascinating embroidery designed mirror.",
     material: "wooden frame",
@@ -108,9 +108,9 @@ export const products: iProduct[] = [
     name: "Elegant Luxury Mirror with Table",
     category: "Mirrors",
     image: [
-      "/assets/products/mirror-a1.jpg",
-      "/assets/products/mirror-a2.jpg",
-      "/assets/products/mirror-a3.jpg",
+      "https://res.cloudinary.com/dgdbctcqt/image/upload/v1741683236/mirror-a1_jmsupp.jpg",
+      "https://res.cloudinary.com/dgdbctcqt/image/upload/v1741683257/mirror-a2_tfdy7b.jpg",
+      "https://res.cloudinary.com/dgdbctcqt/image/upload/v1741683262/mirror-a3_b137cp.jpg",
     ],
     featured: true,
     description: "A stylish luxury mirror and table with ample space.",
@@ -126,11 +126,12 @@ export const products: iProduct[] = [
     name: "Royal Vase Table",
     category: "Tables",
     image: [
-      "/assets/products/table-a1.jpg",
-      "/assets/products/table-a2.jpg",
-      "/assets/products/table-a3.jpg",
-      "/assets/products/table-a4.jpg",
-      "/assets/products/table-a5.jpg",
+      "https://res.cloudinary.com/dgdbctcqt/image/upload/v1741684742/table-a1_obb6oh.jpg",
+      "https://res.cloudinary.com/dgdbctcqt/image/upload/v1741684144/table-a3_khxsg4.jpg",
+      "https://res.cloudinary.com/dgdbctcqt/image/upload/v1741684144/table-a3_khxsg4.jpg",
+      "https://res.cloudinary.com/dgdbctcqt/image/upload/v1741684627/table-a4_bb1bza.jpg",
+      "https://res.cloudinary.com/dgdbctcqt/image/upload/v1741684655/table-a2_g3ret5.jpg",
+      "https://res.cloudinary.com/dgdbctcqt/image/upload/v1741684697/table-a3_rfoutz.jpg",
     ],
     featured: false,
     description:
@@ -146,7 +147,7 @@ export const products: iProduct[] = [
     id: "9",
     name: "Golden Table",
     category: "Tables",
-    image: ["/assets/products/table-1.jpg", "/assets/products/table-1.jpg"],
+    image: ["https://res.cloudinary.com/dgdbctcqt/image/upload/v1741684818/table-1_ju8gr7.jpg", "https://res.cloudinary.com/dgdbctcqt/image/upload/v1741683273/table-2_j4ejht.jpg"],
     featured: false,
     description: "Golden luxury table to add charm to any space.",
     material: "Golden Embroidery, wooden legs",
@@ -155,6 +156,442 @@ export const products: iProduct[] = [
     height: "32",
     weight: "10",
     instruction: "Dust regularly, avoid water spills",
+  },
+
+  {
+    id: "10",
+    name: "Royal Silver Comfortable Chair",
+    category: "Chairs",
+    image: [
+      "https://res.cloudinary.com/dgdbctcqt/image/upload/v1741683181/chair-1_sxh2l0.jpg",
+      "https://res.cloudinary.com/dgdbctcqt/image/upload/v1741683178/chair-2_k7uz30.jpg",
+      "https://res.cloudinary.com/dgdbctcqt/image/upload/v1741683176/chair-4_mxgd84.jpg",
+      "https://res.cloudinary.com/dgdbctcqt/image/upload/v1741683162/chair-3_xsadvm.jpg",
+      "https://res.cloudinary.com/dgdbctcqt/image/upload/v1741683198/chair-5_qktuwf.jpg",
+    ],
+    featured: false,
+    description:
+      "A handcrafted comfortable and elegant wooden chair with silver coating.",
+    material: "Premium quality wood, and silver.",
+    length: "30",
+    width: "20",
+    height: "15",
+    weight: "1.5",
+    instruction: "Wipe clean with a soft, dry cloth",
+  },
+  {
+    id: "11",
+    name: "Designed Golden Mirror",
+    category: "Mirrors",
+    image: [
+      "https://res.cloudinary.com/dgdbctcqt/image/upload/v1741683242/mirror-3_k9rqq7.jpg",
+    ],
+    featured: false,
+    description: "A stylish golden framed mirror.",
+    material: "Engineered wood.",
+    length: "36",
+    width: "12",
+    height: "72",
+    weight: "20",
+    instruction: "Dust regularly, avoid exposure to moisture",
+  },
+  {
+    id: "12",
+    name: "Modern Bathroom",
+    category: "Bedroom",
+    image: ["=============================="],
+    featured: false,
+    description:
+      "A Modern loo furniture and artifacts.",
+    material: "Solid wood",
+    length: "72",
+    width: "36",
+    height: "30",
+    weight: "25",
+    instruction: "Wipe clean with a soft cloth",
+  },
+  {
+    id: "13",
+    name: "Silver Watch",
+    category: "Watches",
+    image: ["https://res.cloudinary.com/dgdbctcqt/image/upload/v1741683277/sofa-2_q1uer7.jpg"],
+    featured: false,
+    description: "An eye catching silver colored watch.",
+    material: "Mirror and Wood",
+    length: "80",
+    width: "35",
+    height: "32",
+    weight: "40",
+    instruction: "Dust clean every 1-2 weeks.",
+  },
+  {
+    id: "14",
+    name: "Table Watch",
+    category: "Watches",
+    image: ["https://res.cloudinary.com/dgdbctcqt/image/upload/v1741683277/sofa-2_q1uer7.jpg"],
+    featured: false,
+    description: "An eye catching designed table watch.",
+    material: "Mirror and Wood",
+    length: "80",
+    width: "35",
+    height: "32",
+    weight: "40",
+    instruction: "Dust clean every 1-2 weeks.",
+  },
+  {
+    id: "15",
+    name: "Modern Bedroom",
+    category: "Bedroom",
+    image: ["=============================="],
+    featured: false,
+    description:
+      "A Modern minimal bedroom furniture with a few artifacts.",
+    material: "Solid wood",
+    length: "72",
+    width: "36",
+    height: "30",
+    weight: "25",
+    instruction: "Wipe clean with a soft cloth",
+  },
+  {
+    id: "16",
+    name: "Golden Rounded Mirror",
+    category: "Mirrors",
+    image: ["https://res.cloudinary.com/dgdbctcqt/image/upload/v1741683277/sofa-2_q1uer7.jpg"],
+    featured: false,
+    description: "Aesthetic Golden color rounded mirror, with durable frame.",
+    material: "Mirror and Wood",
+    length: "80",
+    width: "35",
+    height: "32",
+    weight: "40",
+    instruction: "Dust clean every 1-2 weeks.",
+  },
+  {
+    "id": "17",
+    "name": "Royal Serving Table",
+    "category": "Tables",
+    "image": [
+      "https://res.cloudinary.com/dgdbctcqt/image/upload/v1741683228/dine-2_uqjqwz.jpg",
+      "https://res.cloudinary.com/dgdbctcqt/image/upload/v1741683215/dine-3_c10aju.jpg"
+    ],
+    "featured": false,
+    "description": "A royal serving table with silver coating that complements interior.",
+    "material": "Solid Wood and Silver",
+    "length": "42",
+    "width": "22",
+    "height": "18",
+    "weight": "12",
+    "instruction": "Clean with a soft cloth, avoid sharp objects."
+  },
+  {
+    "id": "18",
+    "name": "Classic Round Serving Table",
+    "category": "Tables",
+    "image": [
+      "https://res.cloudinary.com/dgdbctcqt/image/upload/v1741683228/round-table.jpg"
+    ],
+    "featured": true,
+    "description": "A beautifully crafted round serving table with a silver-coated finish, perfect for elegant dining setups.",
+    "material": "Solid Wood and Silver",
+    "length": "36",
+    "width": "36",
+    "height": "18",
+    "weight": "14",
+    "instruction": "Clean with a soft cloth, avoid sharp objects."
+  },
+  {
+    "id": "19",
+    "name": "Vintage Silver-Coated Serving Table",
+    "category": "Tables",
+    "image": [
+      "https://res.cloudinary.com/dgdbctcqt/image/upload/v1741683215/vintage-serving.jpg"
+    ],
+    "featured": false,
+    "description": "A vintage-styled silver-coated serving table that adds elegance to your decor.",
+    "material": "Solid Wood and Silver",
+    "length": "40",
+    "width": "22",
+    "height": "18",
+    "weight": "12",
+    "instruction": "Clean with a soft cloth, avoid sharp objects."
+  },
+  {
+    "id": "20",
+    "name": "Elegant Wooden Serving Table",
+    "category": "Tables",
+    "image": [
+      "https://res.cloudinary.com/dgdbctcqt/image/upload/v1741683215/elegant-serving.jpg"
+    ],
+    "featured": false,
+    "description": "An elegant wooden serving table with silver coating for a luxurious appeal.",
+    "material": "Solid Wood and Silver",
+    "length": "42",
+    "width": "24",
+    "height": "18",
+    "weight": "13",
+    "instruction": "Clean with a soft cloth, avoid sharp objects."
+  },
+  {
+    "id": "21",
+    "name": "Elegant Silver-Coated Mirror",
+    "category": "Mirrors",
+    "image": [
+      "https://res.cloudinary.com/dgdbctcqt/image/upload/v1741683215/silver-mirror.jpg"
+    ],
+    "featured": true,
+    "description": "A rectangular silver-coated mirror with intricate detailing for a majestic look.",
+    "material": "Solid Wood and Silver",
+    "length": "50",
+    "width": "30",
+    "height": "2",
+    "weight": "10",
+    "instruction": "Use a glass cleaner for the mirror, wipe wooden frame with a soft cloth."
+  },
+  {
+    "id": "22",
+    "name": "Traditional Wooden Temple",
+    "category": "Bedroom",
+    "image": [
+      "https://res.cloudinary.com/dgdbctcqt/image/upload/v1741683215/wooden-temple.jpg"
+    ],
+    "featured": false,
+    "description": "A beautifully handcrafted wooden temple for home and spiritual spaces.",
+    "material": "Solid Wood",
+    "length": "40",
+    "width": "25",
+    "height": "60",
+    "weight": "30",
+    "instruction": "Dust with a soft cloth; avoid water exposure."
+  },
+  {
+    "id": "23",
+    "name": "Brass-Coated Horse Artifact",
+    "category": "Bedroom",
+    "image": [
+      "https://res.cloudinary.com/dgdbctcqt/image/upload/v1741683215/horse-artifact.jpg"
+    ],
+    "featured": true,
+    "description": "A stunning brass-coated horse artifact, symbolizing grace and strength.",
+    "material": "Brass-Coated Wood",
+    "length": "24",
+    "width": "8",
+    "height": "30",
+    "weight": "15",
+    "instruction": "Wipe with a dry cloth, avoid moisture."
+  },
+  {
+    id: "24",
+    name: "Royal Serving Table",
+    category: "Tables",
+    image: [
+      "https://res.cloudinary.com/dgdbctcqt/image/upload/v1741683228/dine-2_uqjqwz.jpg",
+      "https://res.cloudinary.com/dgdbctcqt/image/upload/v1741683215/dine-3_c10aju.jpg",
+    ],
+    featured: false,
+    description:
+      "A royal serving table with silver coating that complements interior.",
+    material: "Solid Wood and Silver",
+    length: "42",
+    width: "22",
+    height: "18",
+    weight: "12",
+    instruction: "Clean with a soft cloth, avoid sharp objects",
+  },
+ {
+    "id": "25",
+    "name": "Majestic Silver-Coated Serving Table",
+    "category": "Tables",
+    "image": [
+      "https://res.cloudinary.com/dgdbctcqt/image/upload/v1741683215/majestic-serving.jpg"
+    ],
+    "featured": false,
+    "description": "A majestic silver-coated wooden serving table that brings luxury to your space.",
+    "material": "Solid Wood and Silver",
+    "length": "44",
+    "width": "24",
+    "height": "18",
+    "weight": "14",
+    "instruction": "Clean with a soft cloth, avoid sharp objects."
+  },
+  {
+    "id": "26",
+    "name": "Elegant Silver-Coated Chair",
+    "category": "Chairs",
+    "image": [
+      "https://res.cloudinary.com/dgdbctcqt/image/upload/v1741683215/elegant-chair.jpg"
+    ],
+    "featured": false,
+    "description": "An elegantly crafted silver-coated wooden chair for a luxurious seating experience.",
+    "material": "Solid Wood and Silver",
+    "length": "20",
+    "width": "20",
+    "height": "40",
+    "weight": "12",
+    "instruction": "Clean with a soft cloth, avoid sharp objects."
+  },
+  {
+    "id": "27",
+    "name": "Classic Royal Chair",
+    "category": "Chairs",
+    "image": [
+      "https://res.cloudinary.com/dgdbctcqt/image/upload/v1741683215/classic-chair.jpg"
+    ],
+    "featured": false,
+    "description": "A classic royal chair with silver-coated detailing and comfortable seating.",
+    "material": "Solid Wood and Silver",
+    "length": "22",
+    "width": "22",
+    "height": "42",
+    "weight": "14",
+    "instruction": "Wipe with a soft cloth; avoid direct moisture exposure."
+  },
+  {
+    "id": "28",
+    "name": "Stylish Silver-Coated Chair",
+    "category": "Chairs",
+    "image": [
+      "https://res.cloudinary.com/dgdbctcqt/image/upload/v1741683215/stylish-chair.jpg"
+    ],
+    "featured": true,
+    "description": "A stylish wooden chair with silver coating, perfect for modern interiors.",
+    "material": "Solid Wood and Silver",
+    "length": "21",
+    "width": "21",
+    "height": "41",
+    "weight": "13",
+    "instruction": "Dust with a dry cloth, avoid moisture."
+  },
+  {
+    "id": "29",
+    "name": "Majestic Silver-Coated Chair",
+    "category": "Chairs",
+    "image": [
+      "https://res.cloudinary.com/dgdbctcqt/image/upload/v1741683215/majestic-chair.jpg"
+    ],
+    "featured": false,
+    "description": "A majestic chair with intricate wooden carvings and a silver-coated finish.",
+    "material": "Solid Wood and Silver",
+    "length": "22",
+    "width": "22",
+    "height": "43",
+    "weight": "15",
+    "instruction": "Wipe with a soft cloth; avoid water exposure."
+  },
+  {
+    "id": "30",
+    "name": "Round Silver-Coated Chair",
+    "category": "Chairs",
+    "image": [
+      "https://res.cloudinary.com/dgdbctcqt/image/upload/v1741683215/round-chair.jpg"
+    ],
+    "featured": true,
+    "description": "A beautifully designed round silver-coated chair with a luxurious feel.",
+    "material": "Solid Wood and Silver",
+    "length": "24",
+    "width": "24",
+    "height": "40",
+    "weight": "14",
+    "instruction": "Dust with a soft cloth, avoid using water."
+  },
+  {
+    "id": "31",
+    "name": "Vintage Chair",
+    "category": "Chairs",
+    "image": [
+      "https://res.cloudinary.com/dgdbctcqt/image/upload/v1741683151/chair-e_fyofaq.jpg",
+      "https://res.cloudinary.com/dgdbctcqt/image/upload/v1741683151/chair-e2_zixqpx.jpg"
+    ],
+    "featured": false,
+    "description": "A vintage-style wooden chair with an antique finish.",
+    "material": "Solid Wood",
+    "length": "21",
+    "width": "21",
+    "height": "42",
+    "weight": "13",
+    "instruction": "Wipe with a dry cloth; avoid direct moisture."
+  },
+  {
+    "id": "32",
+    "name": "Royal Throne Chairs",
+    "category": "Chairs",
+    "image": [
+      "https://res.cloudinary.com/dgdbctcqt/image/upload/v1741683211/chair-h3_sfs689.jpg",
+      "https://res.cloudinary.com/dgdbctcqt/image/upload/v1741683190/chair-h_sebnac.jpg",
+      "https://res.cloudinary.com/dgdbctcqt/image/upload/v1741683171/chair-h2_muefrp.jpg"
+    ],
+    "featured": true,
+    "description": "A luxurious royal throne chairs with intricate silver-coated details.",
+    "material": "Solid Wood and Silver",
+    "length": "25",
+    "width": "25",
+    "height": "48",
+    "weight": "18",
+    "instruction": "Clean with a soft cloth; avoid sharp objects."
+  },
+  {
+    "id": "33",
+    "name": "Royal Silver-Coated Sofa",
+    "category": "Sofas",
+    "image": [
+      "https://res.cloudinary.com/dgdbctcqt/image/upload/v1741683264/sofa-h_xwt0ny.jpg"
+    ],
+    "featured": false,
+    "description": "A royal-style silver-coated wooden sofa with intricate craftsmanship.",
+    "material": "Solid Wood and Silver",
+    "length": "78",
+    "width": "34",
+    "height": "42",
+    "weight": "48",
+    "instruction": "Wipe with a soft cloth; avoid direct moisture exposure."
+  },
+  {
+    "id": "34",
+    "name": "Vintage Wooden Sofa",
+    "category": "Sofas",
+    "image": [
+      "https://res.cloudinary.com/dgdbctcqt/image/upload/v1741683259/sofa-d_jq2vhz.jpg"
+    ],
+    "featured": false,
+    "description": "A vintage-style wooden sofa with elegant detailing.",
+    "material": "Solid Wood",
+    "length": "72",
+    "width": "32",
+    "height": "40",
+    "weight": "45",
+    "instruction": "Wipe with a soft cloth; avoid direct moisture exposure."
+  },
+  {
+    "id": "35",
+    "name": "Classic Silver-Coated Sofa",
+    "category": "Sofas",
+    "image": [
+      "https://res.cloudinary.com/dgdbctcqt/image/upload/v1741683261/sofa-c1_ky5ynk.jpg"
+    ],
+    "featured": false,
+    "description": "A classic silver-coated wooden sofa designed for luxurious comfort.",
+    "material": "Solid Wood and Silver",
+    "length": "75",
+    "width": "32",
+    "height": "41",
+    "weight": "46",
+    "instruction": "Dust with a dry cloth, avoid moisture."
+  },
+  {
+    "id": "36",
+    "name": "Luxury Throne Sofa",
+    "category": "Sofas",
+    "image": [
+      "https://res.cloudinary.com/dgdbctcqt/image/upload/v1741683261/sofa-e_scdbmf.jpg"
+    ],
+    "featured": false,
+    "description": "A luxurious throne-style silver-coated wooden sofa for royal interiors.",
+    "material": "Solid Wood and Silver",
+    "length": "80",
+    "width": "35",
+    "height": "45",
+    "weight": "50",
+    "instruction": "Clean with a soft cloth, avoid sharp objects."
   },
 ];
 
