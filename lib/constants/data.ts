@@ -3,7 +3,7 @@ import { iProduct } from "@/types";
 // Featured data
 export const products: iProduct[] = [
   {
-    id: "1",
+    _id: "1",
     name: "Wooden Comfortable Chair",
     category: "Chairs",
     image: [
@@ -24,7 +24,7 @@ export const products: iProduct[] = [
     instruction: "Wipe clean with a soft, dry cloth",
   },
   {
-    id: "2",
+    _id: "2",
     name: "White Wooden Chair",
     category: "Chairs",
     image: [
@@ -42,7 +42,7 @@ export const products: iProduct[] = [
     instruction: "Wipe clean with a soft, dry cloth",
   },
   {
-    id: "3",
+    _id: "3",
     name: "Tranquil Sofa",
     category: "Sofas",
     image: [
@@ -59,7 +59,7 @@ export const products: iProduct[] = [
     instruction: "Vacuum regularly, professional cleaning recommended",
   },
   {
-    id: "4",
+    _id: "4",
     name: "Elegant Golden Mirror",
     category: "Mirrors",
     image: [
@@ -77,7 +77,7 @@ export const products: iProduct[] = [
     instruction: "Dust regularly, avoid exposure to moisture",
   },
   {
-    id: "5",
+    _id: "5",
     name: "Royal Coffee Table, Sofa, and Chairs",
     category: "Tables",
     image: [
@@ -96,7 +96,7 @@ export const products: iProduct[] = [
     instruction: "Clean with a soft cloth, avoid sharp objects",
   },
   {
-    id: "6",
+    _id: "6",
     name: "Designed Mirror",
     category: "Mirrors",
     image: [
@@ -112,7 +112,7 @@ export const products: iProduct[] = [
     instruction: "Wipe clean with a soft, dry cloth",
   },
   {
-    id: "7",
+    _id: "7",
     name: "Elegant Luxury Mirror with Table",
     category: "Mirrors",
     image: [
@@ -130,7 +130,7 @@ export const products: iProduct[] = [
     instruction: "Wipe clean with a soft, dry cloth",
   },
   {
-    id: "8",
+    _id: "8",
     name: "Royal Vase Table",
     category: "Tables",
     image: [
@@ -152,7 +152,7 @@ export const products: iProduct[] = [
     instruction: "Dust regularly, wipe with a damp cloth",
   },
   {
-    id: "9",
+    _id: "9",
     name: "Golden Table",
     category: "Tables",
     image: [
@@ -170,7 +170,7 @@ export const products: iProduct[] = [
   },
 
   {
-    id: "10",
+    _id: "10",
     name: "Royal Silver Comfortable Chair",
     category: "Chairs",
     image: [
@@ -191,7 +191,7 @@ export const products: iProduct[] = [
     instruction: "Wipe clean with a soft, dry cloth",
   },
   {
-    id: "11",
+    _id: "11",
     name: "Designed Golden Mirror",
     category: "Mirrors",
     image: [
@@ -207,7 +207,7 @@ export const products: iProduct[] = [
     instruction: "Dust regularly, avoid exposure to moisture",
   },
   {
-    id: "12",
+    _id: "12",
     name: "Modern Bathroom",
     category: "Bedroom",
     image: [
@@ -223,7 +223,7 @@ export const products: iProduct[] = [
     instruction: "Wipe clean with a soft cloth",
   },
   {
-    id: "13",
+    _id: "13",
     name: "Silver Watch",
     category: "Watches",
     image: [
@@ -239,7 +239,7 @@ export const products: iProduct[] = [
     instruction: "Dust clean every 1-2 weeks.",
   },
   {
-    id: "14",
+    _id: "14",
     name: "Table Watch",
     category: "Watches",
     image: [
@@ -255,7 +255,7 @@ export const products: iProduct[] = [
     instruction: "Dust clean every 1-2 weeks.",
   },
   {
-    id: "15",
+    _id: "15",
     name: "Modern Bedroom",
     category: "Bedroom",
     image: [
@@ -271,7 +271,7 @@ export const products: iProduct[] = [
     instruction: "Wipe clean with a soft cloth",
   },
   {
-    id: "16",
+    _id: "16",
     name: "Golden Rounded Mirror",
     category: "Mirrors",
     image: [
@@ -287,7 +287,7 @@ export const products: iProduct[] = [
     instruction: "Dust clean every 1-2 weeks.",
   },
   {
-    id: "17",
+    _id: "17",
     name: "Royal Serving Table",
     category: "Tables",
     image: [
@@ -304,7 +304,7 @@ export const products: iProduct[] = [
     instruction: "Clean with a soft cloth, avoid sharp objects.",
   },
   {
-    id: "18",
+    _id: "18",
     name: "Classic Round Serving Table",
     category: "Tables",
     image: [
@@ -321,7 +321,7 @@ export const products: iProduct[] = [
     instruction: "Clean with a soft cloth, avoid sharp objects.",
   },
   {
-    id: "19",
+    _id: "19",
     name: "Vintage Silver-Coated Serving Table",
     category: "Tables",
     image: [
@@ -338,7 +338,7 @@ export const products: iProduct[] = [
     instruction: "Clean with a soft cloth, avoid sharp objects.",
   },
   {
-    id: "20",
+    _id: "20",
     name: "Elegant Wooden Serving Table",
     category: "Tables",
     image: [
@@ -356,7 +356,7 @@ export const products: iProduct[] = [
     instruction: "Clean with a soft cloth, avoid sharp objects.",
   },
   {
-    id: "21",
+    _id: "21",
     name: "Elegant Silver-Coated Mirror",
     category: "Mirrors",
     image: [
@@ -374,7 +374,7 @@ export const products: iProduct[] = [
       "Use a glass cleaner for the mirror, wipe wooden frame with a soft cloth.",
   },
   {
-    id: "22",
+    _id: "22",
     name: "Traditional Wooden Temple",
     category: "Bedroom",
     image: [
@@ -391,7 +391,7 @@ export const products: iProduct[] = [
     instruction: "Dust with a soft cloth; avoid water exposure.",
   },
   {
-    id: "23",
+    _id: "23",
     name: "Brass-Coated Horse Artifact",
     category: "Bedroom",
     image: [
@@ -408,7 +408,7 @@ export const products: iProduct[] = [
     instruction: "Wipe with a dry cloth, avoid moisture.",
   },
   {
-    id: "24",
+    _id: "24",
     name: "Royal Table like Sofa",
     category: "Sofas",
     image: [
@@ -425,7 +425,7 @@ export const products: iProduct[] = [
     instruction: "Clean with a soft cloth, avoid sharp objects",
   },
   {
-    id: "25",
+    _id: "25",
     name: "Majestic Silver-Coated Serving Table",
     category: "Tables",
     image: [
@@ -442,7 +442,7 @@ export const products: iProduct[] = [
     instruction: "Clean with a soft cloth, avoid sharp objects.",
   },
   {
-    id: "26",
+    _id: "26",
     name: "Elegant Black Chair",
     category: "Chairs",
     image: [
@@ -459,7 +459,7 @@ export const products: iProduct[] = [
     instruction: "Clean with a soft cloth, avoid sharp objects.",
   },
   {
-    id: "27",
+    _id: "27",
     name: "Classic Royal Chair",
     category: "Chairs",
     image: [
@@ -476,7 +476,7 @@ export const products: iProduct[] = [
     instruction: "Wipe with a soft cloth; avoid direct moisture exposure.",
   },
   {
-    id: "28",
+    _id: "28",
     name: "Stylish Brass-Coated Chair",
     category: "Chairs",
     image: [
@@ -493,7 +493,7 @@ export const products: iProduct[] = [
     instruction: "Dust with a dry cloth, avoid moisture.",
   },
   {
-    id: "29",
+    _id: "29",
     name: "Majestic Silver-Coated Chair",
     category: "Chairs",
     image: [
@@ -510,7 +510,7 @@ export const products: iProduct[] = [
     instruction: "Wipe with a soft cloth; avoid water exposure.",
   },
   {
-    id: "30",
+    _id: "30",
     name: "Round Silver-Coated Chair",
     category: "Chairs",
     image: [
@@ -527,7 +527,7 @@ export const products: iProduct[] = [
     instruction: "Dust with a soft cloth, avoid using water.",
   },
   {
-    id: "31",
+    _id: "31",
     name: "Vintage Chair",
     category: "Chairs",
     image: [
@@ -544,7 +544,7 @@ export const products: iProduct[] = [
     instruction: "Wipe with a dry cloth; avoid direct moisture.",
   },
   {
-    id: "32",
+    _id: "32",
     name: "Royal Throne Chairs",
     category: "Chairs",
     image: [
@@ -563,7 +563,7 @@ export const products: iProduct[] = [
     instruction: "Clean with a soft cloth; avoid sharp objects.",
   },
   {
-    id: "33",
+    _id: "33",
     name: "Royal Silver-Coated Sofa",
     category: "Sofas",
     image: [
@@ -580,7 +580,7 @@ export const products: iProduct[] = [
     instruction: "Wipe with a soft cloth; avoid direct moisture exposure.",
   },
   {
-    id: "34",
+    _id: "34",
     name: "Vintage Wooden Sofa",
     category: "Sofas",
     image: [
@@ -596,7 +596,7 @@ export const products: iProduct[] = [
     instruction: "Wipe with a soft cloth; avoid direct moisture exposure.",
   },
   {
-    id: "35",
+    _id: "35",
     name: "Classic Silver-Coated Sofa",
     category: "Sofas",
     image: [
@@ -613,7 +613,7 @@ export const products: iProduct[] = [
     instruction: "Dust with a dry cloth, avoid moisture.",
   },
   {
-    id: "36",
+    _id: "36",
     name: "Luxury Throne Sofa",
     category: "Sofas",
     image: [

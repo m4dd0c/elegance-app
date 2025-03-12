@@ -14,13 +14,13 @@ const ProductCard = ({
 }) => {
   return (
     <motion.div
-      key={product?.id}
+      key={product?._id}
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay: index * 0.05 }}
       viewport={{ once: true }}
     >
-      <Link href={`/products/${product?.id}`} className="overflow-hidden">
+      <Link href={`/products/${product?._id}`} className="overflow-hidden">
         <div className="aspect-square relative overflow-hidden">
           <Image
             src={product?.image?.[0] ?? fallback}

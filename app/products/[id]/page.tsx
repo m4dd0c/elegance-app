@@ -21,7 +21,7 @@ export default function ProductDetail({ params }: { params: { id: string } }) {
 
   // Memoized product lookup
   const product = useMemo(
-    () => products.find((p) => p.id === params.id) || products[0],
+    () => products.find((p) => p._id === params.id) || products[0],
     [params.id],
   );
 
