@@ -19,14 +19,14 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { createProdluct } from "@/lib/actions/createProduct";
+import { createProduct } from "@/lib/actions/productAction";
 
 const formSchema = z.object({
   name: z.string().min(1, "Product name is required"),
   description: z.string().min(1, "Description is required"),
   category: z.string().min(1, "Category is required"),
-  image: z.string().min(1, "Image is required"),
-  featured: z.string().min(1, "Featured is required"),
+  images: z.array(z.string()).min(1, "Image is required"),
+  featured: z.boolean(),
   material: z.string().min(1, "Material is required"),
   length: z.string().min(1, "Length is required"),
   width: z.string().min(1, "Width is required"),
@@ -44,6 +44,7 @@ export default function AdminPage() {
     register,
     handleSubmit,
     setValue,
+    getValues,
     reset,
     formState: { errors },
   } = useForm({
@@ -51,8 +52,8 @@ export default function AdminPage() {
     defaultValues: {
       name: "",
       category: "",
-      image: "",
-      featured: "",
+      images: [],
+      featured: false,
       material: "",
       length: "",
       width: "",
@@ -66,7 +67,8 @@ export default function AdminPage() {
   const onSubmit = async (data: z.infer<typeof formSchema>) => {
     try {
       setIsSubmitting(true);
-      await createProdluct(data);
+      // sanitize data.images only allow true values
+      await createProduct(data);
       toast({
         title: "Success",
         description: "Product created successfully",
@@ -172,8 +174,9 @@ export default function AdminPage() {
                     <SelectItem value="Tables">Tables</SelectItem>
                     <SelectItem value="Sofas">Sofas</SelectItem>
                     <SelectItem value="Watches">Watches</SelectItem>
-                    <SelectItem value="Office">Office</SelectItem>
+                    <SelectItem value="Mirrors">Mirrors</SelectItem>
                     <SelectItem value="Bedroom">Bedroom</SelectItem>
+                    <SelectItem value="Other">Other</SelectItem>
                   </SelectContent>
                 </Select>
                 {errors.category && (
@@ -190,11 +193,11 @@ export default function AdminPage() {
                     id="length"
                     type="text"
                     {...register("length")}
-                    placeholder="Length"
+                    placeholder="Length in cm"
                   />
-                  {errors.featured && (
+                  {errors.length && (
                     <p className="text-sm text-destructive">
-                      {errors.featured.message}
+                      {errors.length.message}
                     </p>
                   )}
                 </div>
@@ -205,7 +208,7 @@ export default function AdminPage() {
                     id="width"
                     type="text"
                     {...register("width")}
-                    placeholder="Width"
+                    placeholder="Width in cm"
                   />
                   {errors.width && (
                     <p className="text-sm text-destructive">
@@ -222,7 +225,7 @@ export default function AdminPage() {
                     id="height"
                     type="text"
                     {...register("height")}
-                    placeholder="Height"
+                    placeholder="Height in cm"
                   />
                   {errors.height && (
                     <p className="text-sm text-destructive">
@@ -237,7 +240,7 @@ export default function AdminPage() {
                     id="weight"
                     type="text"
                     {...register("weight")}
-                    placeholder="Weight"
+                    placeholder="Weight in kg"
                   />
                   {errors.weight && (
                     <p className="text-sm text-destructive">
@@ -250,9 +253,21 @@ export default function AdminPage() {
               <div className="space-y-2">
                 <Label>Product Image</Label>
                 <CldUploadWidget
-                  uploadPreset="furniture_store"
-                  onUpload={(result: any) => {
-                    setValue("image", result.info.secure_url);
+                  uploadPreset="MaheshHandicrafts"
+                  onSuccess={(result: any) => {
+                    if (result?.info?.secure_url) {
+                      // Retrieve the current images array from the form state
+                      const currentImages = getValues("images") || [];
+
+                      // Append the new image URL to the existing array
+                      const updatedImages = [
+                        ...currentImages,
+                        result.info.secure_url,
+                      ];
+
+                      // Update the form state with the new array
+                      setValue("images", updatedImages as never[]);
+                    }
                     setIsUploading(false);
                   }}
                   onOpen={() => setIsUploading(true)}
@@ -276,9 +291,9 @@ export default function AdminPage() {
                     </div>
                   )}
                 </CldUploadWidget>
-                {errors.image && (
+                {errors.images && (
                   <p className="text-sm text-destructive">
-                    {errors.image.message}
+                    {errors.images.message}
                   </p>
                 )}
               </div>

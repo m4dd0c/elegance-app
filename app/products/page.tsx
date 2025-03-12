@@ -9,7 +9,16 @@ import ProductCard from "@/components/cards/ProductCard";
 import { products } from "@/lib/constants/data";
 
 // Categories
-const categories = ["All", "Chairs", "Tables", "Sofas", "Mirrors", "Watches", "Bedroom"];
+const categories = [
+  "All",
+  "Chairs",
+  "Tables",
+  "Sofas",
+  "Mirrors",
+  "Watches",
+  "Bedroom",
+  "Other",
+];
 
 export default function ProductsPage() {
   const [searchQuery, setSearchQuery] = useState("");
@@ -21,7 +30,8 @@ export default function ProductsPage() {
 
     return products.filter((product) => {
       const matchesSearch = product.name.toLowerCase().includes(lowerSearch);
-      const matchesCategory = selectedCategory === "All" || product.category === selectedCategory;
+      const matchesCategory =
+        selectedCategory === "All" || product.category === selectedCategory;
       return matchesSearch && matchesCategory;
     });
   }, [searchQuery, selectedCategory]);
@@ -37,9 +47,12 @@ export default function ProductsPage() {
             transition={{ duration: 0.5 }}
             className="text-center"
           >
-            <h1 className="font-playfair text-4xl font-bold md:text-5xl">Our Products</h1>
+            <h1 className="font-playfair text-4xl font-bold md:text-5xl">
+              Our Products
+            </h1>
             <p className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground">
-              Discover our collection of meticulously crafted furniture pieces designed to transform your space.
+              Discover our collection of meticulously crafted furniture pieces
+              designed to transform your space.
             </p>
           </motion.div>
         </div>
@@ -86,7 +99,9 @@ export default function ProductsPage() {
           ) : (
             <div className="my-12 text-center">
               <h3 className="text-xl font-medium">No products found</h3>
-              <p className="mt-2 text-muted-foreground">Try adjusting your search or filter criteria</p>
+              <p className="mt-2 text-muted-foreground">
+                Try adjusting your search or filter criteria
+              </p>
               <Button
                 className="mt-4"
                 onClick={() => {
