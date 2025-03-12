@@ -4,6 +4,7 @@ import { Instagram, MessageCircle } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
 import Image from "next/image";
 import logo from "@/public/assets/logo.png";
+import { Button } from "./ui/button";
 
 export function Footer() {
   return (
@@ -71,6 +72,18 @@ export function Footer() {
             </div>
           </div>
 
+          <div className="text-right">
+            <h2 className="font-playfair text-3xl font-bold">
+              Visit Our Showroom
+            </h2>
+            <p className="mx-auto mt-2 text-muted-foreground">
+              Experience our furniture in person and speak with our design
+              consultants.
+            </p>
+            <Button size="lg" className="mt-4" asChild>
+              <Link href="/contact">Contact Us</Link>
+            </Button>
+          </div>
           <div>
             <h4 className="mb-4 font-medium">Company</h4>
             <ul className="space-y-2 text-sm text-muted-foreground">
@@ -87,27 +100,6 @@ export function Footer() {
               <li>
                 <Link href="/contact" className="hover:text-primary">
                   Contact
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          <div>
-            <h4 className="mb-4 font-medium">Rules</h4>
-            <ul className="space-y-2 text-sm text-muted-foreground">
-              <li>
-                <Link href="/privacy" className="hover:text-primary">
-                  Privacy Policy
-                </Link>
-              </li>
-              <li>
-                <Link href="/terms" className="hover:text-primary">
-                  Terms of Service
-                </Link>
-              </li>
-              <li>
-                <Link href="/shipping" className="hover:text-primary">
-                  Shipping & Returns
                 </Link>
               </li>
             </ul>
