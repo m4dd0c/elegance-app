@@ -245,9 +245,9 @@ export default function ContactPage() {
 
               <div className="mt-8 aspect-square relative border h-full w-full overflow-hidden rounded-lg flex items-center justify-center text-center">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d1813.638927318461!2d73.70871041578906!3d24.61410660000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1s100%20fit%2C%20sobhagpura%20meera%20nagar%2C%20near%20parmanand%20garden!5e0!3m2!1sen!2sin!4v1741507904025!5m2!1sen!2sin"
+                  src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d682.0342884783352!2d73.70951135112126!3d24.613681126463227!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1s100%20Fit%2C%20Sobhagpura%20Meera%20Nagar%20%20Near%20Parmanand%20Garden%20Udaipur%20!5e1!3m2!1sen!2sin!4v1741767391104!5m2!1sen!2sin"
                   loading="lazy"
-                  className="w-full h-full"
+                  className="h-full w-full"
                 ></iframe>
               </div>
             </motion.div>
