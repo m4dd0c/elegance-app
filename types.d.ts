@@ -12,3 +12,11 @@ export interface iProduct {
   weight: string;
   instruction: string;
 }
+
+export interface iSendMail {
+  name: string;
+  email: string;
+  phone?: string;
+  message: string;
+  subject: string;
+}

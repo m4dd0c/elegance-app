@@ -1,17 +1,19 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useTransition } from "react";
 import { motion } from "framer-motion";
-import { MapPin, Phone, Mail, Clock, Send } from "lucide-react";
+import { MapPin, Phone, Mail, Clock, Send, Loader } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { useToast } from "@/hooks/use-toast";
+import { sendMail } from "@/lib/actions/sendMail";
 
 export default function ContactPage() {
   const { toast } = useToast();
+  const [isPending, startTransition] = useTransition();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -31,25 +33,32 @@ export default function ContactPage() {
     setFormData((prev) => ({ ...prev, subject: value }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Form submitted:", formData);
 
-    // TODO: send actual email
-
-    // Show success toast
-    toast({
-      title: "Message Sent",
-      description: "We'll get back to you as soon as possible.",
-    });
-
-    // Reset form
-    setFormData({
-      name: "",
-      email: "",
-      phone: "",
-      subject: "General Inquiry",
-      message: "",
+    startTransition(async () => {
+      const mail = await sendMail(formData);
+      if (mail) {
+        // Show success toast
+        toast({
+          title: "Message Sent",
+          description: "We'll get back to you as soon as possible.",
+        });
+        // Reset form
+        setFormData({
+          name: "",
+          email: "",
+          phone: "",
+          subject: "General Inquiry",
+          message: "",
+        });
+      } else {
+        toast({
+          title: "Message couldn't be Sent",
+          description: "We'll get back to you as soon as possible.",
+          variant: "destructive",
+        });
+      }
     });
   };
 
@@ -224,8 +233,17 @@ export default function ContactPage() {
                     />
                   </div>
                 </div>
-                <Button type="submit">
-                  <Send className="mr-2 h-4 w-4" /> Send Message
+                <Button type="submit" disabled={isPending}>
+                  {isPending ? (
+                    <>
+                      <Loader className="mr-2 h-4 w-4 animate-spin" /> Send
+                      Message
+                    </>
+                  ) : (
+                    <>
+                      <Send className="mr-2 h-4 w-4" /> Send Message
+                    </>
+                  )}
                 </Button>
               </form>
             </motion.div>
