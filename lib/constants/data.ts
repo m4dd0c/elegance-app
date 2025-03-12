@@ -634,7 +634,7 @@ export const products: iProduct[] = [
 // Testimonials data
 export const testimonials = [
   {
-    id: 1,
+    _id: 1,
     name: "Manish Suthar",
     role: "Cyber Sec Engineer",
     content:
@@ -642,7 +642,7 @@ export const testimonials = [
     avatar: "https://avatars.githubusercontent.com/u/77256586?v=4",
   },
   {
-    id: 2,
+    _id: 2,
     name: "Nitesh Suthar",
     role: "Animator",
     content:
@@ -650,7 +650,7 @@ export const testimonials = [
     avatar: "https://avatars.githubusercontent.com/u/122961768?v=4",
   },
   {
-    id: 3,
+    _id: 3,
     name: "Harish Suthar",
     role: "Programmer",
     content:
