@@ -59,6 +59,7 @@ export function AdminProductTable() {
   useEffect(() => {
     fetchProducts();
   }, [fetchProducts]);
+
   return (
     <Table>
       <TableCaption>A list of your all Products.</TableCaption>

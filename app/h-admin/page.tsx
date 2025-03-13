@@ -10,8 +10,43 @@ import {
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { AdminForm } from "@/components/admin/AdminForm";
 import { AdminProductTable } from "@/components/admin/AdminProductTable";
+import { useEffect, useState } from "react";
+import { useRouter, useSearchParams } from "next/navigation";
+import { isAdmin } from "@/lib/actions/isAdmin";
+import LoadingScreen from "@/components/LoadingScreen";
 
-export default function Page() {
+export default function AdminPage() {
+  const [auth, setAuth] = useState(false);
+  const [loading, setLoading] = useState(true);
+  const router = useRouter();
+  const searchParams = useSearchParams();
+
+  useEffect(() => {
+    const checkAdmin = async () => {
+      setLoading(true);
+      if (searchParams) {
+        const key = searchParams.get("key");
+        try {
+          const res = await isAdmin({ key });
+          setAuth(res);
+        } catch (error) {
+          setAuth(false);
+        }
+      }
+      setLoading(false);
+    };
+    checkAdmin();
+  }, [searchParams]);
+
+  useEffect(() => {
+    if (!loading && !auth) {
+      router.replace("/");
+    }
+  }, [auth, loading, router]);
+
+  if (loading) return <LoadingScreen />;
+  if (!auth) return null; // User is being redirected
+
   return (
     <Tabs defaultValue="Products" className="py-20 container mx-auto">
       <TabsList className="grid w-full grid-cols-2">
