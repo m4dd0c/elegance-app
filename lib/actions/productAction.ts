@@ -20,7 +20,7 @@ export async function createProduct(data: {
   try {
     await connectDB();
 
-    await Product.create(data);
+    const newProduct = await Product.create(data);
 
     revalidatePath("/products");
     revalidatePath("/admin");
@@ -28,7 +28,7 @@ export async function createProduct(data: {
     return { success: true };
   } catch (error) {
     console.error("Failed to create product:", error);
-    throw new Error("Failed to create product");
+    return { error: "Failed to create product" };
   }
 }
 
@@ -38,39 +38,51 @@ export const getAllProducts = async () => {
 
     const products = await Product.find();
 
-    return { products };
+    const plainProducts = products.map((product) => ({
+      ...product.toObject(),
+      _id: product._id.toString(),
+    }));
+
+    return { products: plainProducts };
   } catch (error) {
     console.error("Failed to fetch products:", error);
-    throw new Error("Failed to fetch products");
+    return { error: "Failed to fetch products" };
   }
 };
 
 export const getSingleProduct = async ({ id }: { id: string }) => {
   try {
-    if (!id) return null;
+    if (!id) return { error: "Invalid product ID" };
+
     await connectDB();
 
     const product = await Product.findById(id);
 
-    return { data: product };
+    if (!product) return { error: "Product not found" };
+
+    return { data: { ...product.toObject(), _id: product._id.toString() } };
   } catch (error) {
     console.error("Failed to fetch product:", error);
-    throw new Error("Failed to fetch product");
+    return { error: "Failed to fetch product" };
   }
 };
 
 export const deleteSingleProduct = async ({ id }: { id: string }) => {
   try {
-    if (!id) return null;
+    if (!id) return { error: "Invalid product ID" };
 
     await connectDB();
+
+    const deletedProduct = await Product.findByIdAndDelete(id);
+
+    if (!deletedProduct) return { error: "Product not found" };
 
     revalidatePath("/products");
     revalidatePath("/admin");
 
-    await Product.findByIdAndDelete(id);
+    return { success: true };
   } catch (error) {
-    console.error("Failed to fetch product:", error);
-    throw new Error("Failed to fetch product");
+    console.error("Failed to delete product:", error);
+    return { error: "Failed to delete product" };
   }
 };

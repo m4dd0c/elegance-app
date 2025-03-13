@@ -25,6 +25,7 @@ const categories = [
 export default function ProductsPage() {
   const [searchQuery, setSearchQuery] = useState("");
   const [products, setProducts] = useState<iProduct[] | []>([]);
+  const [loading, setLoading] = useState(true);
   const [selectedCategory, setSelectedCategory] = useState("All");
   const { toast } = useToast();
 
@@ -41,16 +42,21 @@ export default function ProductsPage() {
   }, [searchQuery, selectedCategory, products]);
 
   useEffect(() => {
-    getAllProducts()
-      .then((res) => {
+    const fetchProducts = async () => {
+      setLoading(true);
+      try {
+        const res = await getAllProducts();
         if (res && res.products) setProducts(res.products);
-      })
-      .catch((e) => {
+      } catch (e: any) {
         toast({
-          title: e?.message || "Something went wrong",
+          title: e?.error || "Something went wrong",
           description: "Failed to fetch products",
         });
-      });
+      } finally {
+        setLoading(false);
+      }
+    };
+    fetchProducts();
   }, [toast]);
 
   return (

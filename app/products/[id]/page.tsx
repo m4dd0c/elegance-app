@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useTransition } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { MessageCircle } from "lucide-react";
@@ -16,11 +16,13 @@ import Link from "next/link";
 import { getSingleProduct } from "@/lib/actions/productAction";
 import { useToast } from "@/hooks/use-toast";
 import { iProduct } from "@/types";
+import LoadingScreen from "@/components/LoadingScreen";
 
 export default function ProductDetail({ params }: { params: { id: string } }) {
   const [selectedImage, setSelectedImage] = useState(0);
   const [product, setProduct] = useState<iProduct | null>(null);
   const [currentUrl, setCurrentUrl] = useState("");
+  const [isPending, startTransition] = useTransition();
   const { toast } = useToast();
 
   // Ensure we get the correct URL after mounting
@@ -31,19 +33,25 @@ export default function ProductDetail({ params }: { params: { id: string } }) {
   }, []);
 
   useEffect(() => {
-    if (params?.id)
-      getSingleProduct({ id: params.id })
-        .then((res) => {
-          if (res && res?.data) setProduct(res.data);
-        })
-        .catch((e) => {
-          toast({
-            title: e?.message || "Something went wrong",
-            description: "Failed to fetch products",
-          });
+    if (params?.id) {
+      const fetchProduct = async () => {
+        startTransition(async () => {
+          try {
+            const res = await getSingleProduct({ id: params.id });
+            if (res && res?.data) setProduct(res.data);
+          } catch (e: any) {
+            toast({
+              title: e?.error || "Something went wrong",
+              description: "Failed to fetch products",
+            });
+          }
         });
+      };
+      fetchProduct();
+    }
   }, [toast, params?.id]);
 
+  if (isPending) return <LoadingScreen />;
   if (!product) return null;
 
   return (

@@ -3,7 +3,7 @@ export interface iProduct {
   name: string;
   category: string;
   images: string[];
-  featured: boolean;
+  featured: "true" | "false";
   description: string;
   material: string;
   length: string;

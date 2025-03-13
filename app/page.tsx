@@ -19,10 +19,12 @@ import ProductCard from "@/components/cards/ProductCard";
 import { getAllProducts } from "@/lib/actions/productAction";
 import { useToast } from "@/hooks/use-toast";
 import { iProduct } from "@/types";
+import LoadingScreen from "@/components/LoadingScreen";
 
 export default function Home() {
   const [mounted, setMounted] = useState(false);
   const [featuredProducts, setFeaturedProducts] = useState<iProduct[] | []>();
+  const [loading, setLoading] = useState(true);
   const { toast } = useToast();
 
   useEffect(() => {
@@ -30,22 +32,30 @@ export default function Home() {
   }, []);
 
   useEffect(() => {
-    getAllProducts()
-      .then((res) => {
+    const fetchProducts = async () => {
+      setLoading(true);
+      try {
+        const res = await getAllProducts();
         if (res && res.products)
-          setFeaturedProducts(res.products.filter((el) => el.featured));
-      })
-      .catch((e) => {
+          setFeaturedProducts(
+            res.products.filter((el) => el.featured === "true"),
+          );
+      } catch (e: any) {
         toast({
-          title: e?.message || "Something went wrong",
+          title: e?.error || "Something went wrong",
           description: "Failed to fetch products",
         });
-      });
+      } finally {
+        setLoading(false);
+      }
+    };
+    fetchProducts();
   }, [toast]);
 
   if (!mounted) {
     return null;
   }
+  if (loading) return <LoadingScreen />;
 
   return (
     <div className="flex flex-col">
@@ -104,7 +114,7 @@ export default function Home() {
               featuredProducts?.map((product, index) => (
                 <ProductCard
                   index={index}
-                  key={product._id}
+                  key={product._id.toString()}
                   product={product}
                 />
               ))}

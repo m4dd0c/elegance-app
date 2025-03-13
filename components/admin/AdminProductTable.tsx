@@ -76,13 +76,13 @@ export function AdminProductTable() {
         {products &&
           products.length > 0 &&
           products.map((product, idx) => (
-            <TableRow key={product._id.toString()}>
+            <TableRow key={product?._id?.toString()}>
               <TableCell>{idx + 1}</TableCell>
-              <TableCell className="font-medium">{product.name}</TableCell>
-              <TableCell>{product.category}</TableCell>
+              <TableCell className="font-medium">{product?.name}</TableCell>
+              <TableCell>{product?.category}</TableCell>
               <TableCell>
                 <span
-                  className={`block h-3 w-3 mx-auto rounded-full ${product.featured ? "bg-green-500" : "bg-red-500"}`}
+                  className={`block h-3 w-3 mx-auto rounded-full ${product && product?.featured === "true" ? "bg-green-500" : "bg-red-500"}`}
                 />
               </TableCell>
               <TableCell className="flex justify-end items-center gap-2">
@@ -91,7 +91,7 @@ export function AdminProductTable() {
                   variant={"secondary"}
                   className="flex items-center justify-center gap-1"
                 >
-                  <Link href={`/products/${product._id}`}>
+                  <Link href={`/products/${product?._id?.toString()}`}>
                     <Eye size={15} />
                     <p>View</p>
                   </Link>
@@ -99,10 +99,10 @@ export function AdminProductTable() {
                 <Button
                   variant={"destructive"}
                   className="flex items-center justify-center gap-1"
-                  disabled={loading === product._id}
-                  onClick={() => handleDelete(product._id)}
+                  disabled={loading === product?._id}
+                  onClick={() => handleDelete(product?._id)}
                 >
-                  {loading === product._id ? (
+                  {loading === product?._id ? (
                     <Loader size={15} className="animate-spin" />
                   ) : (
                     <Trash size={15} />

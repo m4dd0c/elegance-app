@@ -20,7 +20,10 @@ const ProductCard = ({
       transition={{ duration: 0.5, delay: index * 0.05 }}
       viewport={{ once: true }}
     >
-      <Link href={`/products/${product?._id}`} className="overflow-hidden">
+      <Link
+        href={`/products/${product?._id.toString()}`}
+        className="overflow-hidden"
+      >
         <div className="aspect-square relative overflow-hidden">
           <Image
             src={product?.images?.[0] ?? fallback}
@@ -29,7 +32,7 @@ const ProductCard = ({
             fill
             className="object-cover transition-transform hover:scale-105"
           />
-          {product?.featured && (
+          {product?.featured === "true" && (
             <div className="absolute top-2 right-2 rounded-full bg-primary px-2 py-1 text-xs font-medium text-primary-foreground">
               Featured
             </div>
