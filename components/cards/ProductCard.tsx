@@ -23,7 +23,7 @@ const ProductCard = ({
       <Link href={`/products/${product?._id}`} className="overflow-hidden">
         <div className="aspect-square relative overflow-hidden">
           <Image
-            src={product?.image?.[0] ?? fallback}
+            src={product?.images?.[0] ?? fallback}
             alt={product?.name ?? "product-image"}
             quality={40}
             fill

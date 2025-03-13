@@ -2,7 +2,7 @@ export interface iProduct {
   _id: string;
   name: string;
   category: string;
-  image: string[];
+  images: string[];
   featured: boolean;
   description: string;
   material: string;
