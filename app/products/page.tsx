@@ -1,12 +1,14 @@
 "use client";
 
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Search } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import ProductCard from "@/components/cards/ProductCard";
-import { products } from "@/lib/constants/data";
+import { useToast } from "@/hooks/use-toast";
+import { iProduct } from "@/types";
+import { getAllProducts } from "@/lib/actions/productAction";
 
 // Categories
 const categories = [
@@ -22,7 +24,9 @@ const categories = [
 
 export default function ProductsPage() {
   const [searchQuery, setSearchQuery] = useState("");
+  const [products, setProducts] = useState<iProduct[] | []>([]);
   const [selectedCategory, setSelectedCategory] = useState("All");
+  const { toast } = useToast();
 
   // Memoized filtered products
   const filteredProducts = useMemo(() => {
@@ -34,7 +38,20 @@ export default function ProductsPage() {
         selectedCategory === "All" || product.category === selectedCategory;
       return matchesSearch && matchesCategory;
     });
-  }, [searchQuery, selectedCategory]);
+  }, [searchQuery, selectedCategory, products]);
+
+  useEffect(() => {
+    getAllProducts()
+      .then((res) => {
+        if (res && res.products) setProducts(res.products);
+      })
+      .catch((e) => {
+        toast({
+          title: e?.message || "Something went wrong",
+          description: "Failed to fetch products",
+        });
+      });
+  }, [toast]);
 
   return (
     <div className="flex flex-col">

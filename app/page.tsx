@@ -18,10 +18,11 @@ import { testimonials } from "@/lib/constants/data";
 import ProductCard from "@/components/cards/ProductCard";
 import { getAllProducts } from "@/lib/actions/productAction";
 import { useToast } from "@/hooks/use-toast";
+import { iProduct } from "@/types";
 
 export default function Home() {
   const [mounted, setMounted] = useState(false);
-  const [featuredProducts, setFeaturedProducts] = useState<any[]>();
+  const [featuredProducts, setFeaturedProducts] = useState<iProduct[] | []>();
   const { toast } = useToast();
 
   useEffect(() => {
@@ -31,7 +32,6 @@ export default function Home() {
   useEffect(() => {
     getAllProducts()
       .then((res) => {
-        console.log(res);
         if (res && res.products)
           setFeaturedProducts(res.products.filter((el) => el.featured));
       })

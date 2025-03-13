@@ -19,9 +19,9 @@ import { iProduct } from "@/types";
 
 export default function ProductDetail({ params }: { params: { id: string } }) {
   const [selectedImage, setSelectedImage] = useState(0);
-  const { toast } = useToast();
   const [product, setProduct] = useState<iProduct | null>(null);
   const [currentUrl, setCurrentUrl] = useState("");
+  const { toast } = useToast();
 
   // Ensure we get the correct URL after mounting
   useEffect(() => {
@@ -78,6 +78,7 @@ export default function ProductDetail({ params }: { params: { id: string } }) {
                 <Image
                   src={image}
                   alt={`${product.name} view ${index + 1}`}
+                  quality={20}
                   fill
                   className="object-cover"
                 />

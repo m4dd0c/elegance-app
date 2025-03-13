@@ -65,6 +65,9 @@ export const deleteSingleProduct = async ({ id }: { id: string }) => {
 
     await connectDB();
 
+    revalidatePath("/products");
+    revalidatePath("/admin");
+
     await Product.findByIdAndDelete(id);
   } catch (error) {
     console.error("Failed to fetch product:", error);

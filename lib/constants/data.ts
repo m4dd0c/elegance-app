@@ -6,7 +6,7 @@ export const products: iProduct[] = [
     _id: "1",
     name: "Wooden Comfortable Chair",
     category: "Chairs",
-    image: [
+    images: [
       "https://res.cloudinary.com/dgdbctcqt/image/upload/v1741683181/chair-1_sxh2l0.jpg",
       "https://res.cloudinary.com/dgdbctcqt/image/upload/v1741683178/chair-2_k7uz30.jpg",
       "https://res.cloudinary.com/dgdbctcqt/image/upload/v1741683176/chair-4_mxgd84.jpg",
@@ -27,7 +27,7 @@ export const products: iProduct[] = [
     _id: "2",
     name: "White Wooden Chair",
     category: "Chairs",
-    image: [
+    images: [
       "https://res.cloudinary.com/dgdbctcqt/image/upload/v1741683197/chair-a2_qlna8j.jpg",
       "https://res.cloudinary.com/dgdbctcqt/image/upload/v1741683186/chair-a1_nvnssd.jpg",
     ],
@@ -45,7 +45,7 @@ export const products: iProduct[] = [
     _id: "3",
     name: "Tranquil Sofa",
     category: "Sofas",
-    image: [
+    images: [
       "https://res.cloudinary.com/dgdbctcqt/image/upload/v1741683262/sofa-1_giurdw.jpg",
       "https://res.cloudinary.com/dgdbctcqt/image/upload/v1741683277/sofa-2_q1uer7.jpg",
     ],
@@ -62,7 +62,7 @@ export const products: iProduct[] = [
     _id: "4",
     name: "Elegant Golden Mirror",
     category: "Mirrors",
-    image: [
+    images: [
       "https://res.cloudinary.com/dgdbctcqt/image/upload/v1741683242/mirror-3_k9rqq7.jpg",
       "https://res.cloudinary.com/dgdbctcqt/image/upload/v1741683229/mirror-1_iezvk8.jpg",
       "https://res.cloudinary.com/dgdbctcqt/image/upload/v1741683234/mirror-2_tet118.jpg",
@@ -80,7 +80,7 @@ export const products: iProduct[] = [
     _id: "5",
     name: "Royal Coffee Table, Sofa, and Chairs",
     category: "Tables",
-    image: [
+    images: [
       "https://res.cloudinary.com/dgdbctcqt/image/upload/v1741683228/dine-2_uqjqwz.jpg",
       "https://res.cloudinary.com/dgdbctcqt/image/upload/v1741683215/dine-1_ioteh5.jpg",
       "https://res.cloudinary.com/dgdbctcqt/image/upload/v1741683215/dine-3_c10aju.jpg",
@@ -99,7 +99,7 @@ export const products: iProduct[] = [
     _id: "6",
     name: "Designed Mirror",
     category: "Mirrors",
-    image: [
+    images: [
       "https://res.cloudinary.com/dgdbctcqt/image/upload/v1741683261/mirror-b1_n0fren.jpg",
     ],
     featured: false,
@@ -115,7 +115,7 @@ export const products: iProduct[] = [
     _id: "7",
     name: "Elegant Luxury Mirror with Table",
     category: "Mirrors",
-    image: [
+    images: [
       "https://res.cloudinary.com/dgdbctcqt/image/upload/v1741683236/mirror-a1_jmsupp.jpg",
       "https://res.cloudinary.com/dgdbctcqt/image/upload/v1741683257/mirror-a2_tfdy7b.jpg",
       "https://res.cloudinary.com/dgdbctcqt/image/upload/v1741683262/mirror-a3_b137cp.jpg",
@@ -133,7 +133,7 @@ export const products: iProduct[] = [
     _id: "8",
     name: "Royal Vase Table",
     category: "Tables",
-    image: [
+    images: [
       "https://res.cloudinary.com/dgdbctcqt/image/upload/v1741684742/table-a1_obb6oh.jpg",
       "https://res.cloudinary.com/dgdbctcqt/image/upload/v1741684144/table-a3_khxsg4.jpg",
       "https://res.cloudinary.com/dgdbctcqt/image/upload/v1741684144/table-a3_khxsg4.jpg",
@@ -155,7 +155,7 @@ export const products: iProduct[] = [
     _id: "9",
     name: "Golden Table",
     category: "Tables",
-    image: [
+    images: [
       "https://res.cloudinary.com/dgdbctcqt/image/upload/v1741684818/table-1_ju8gr7.jpg",
       "https://res.cloudinary.com/dgdbctcqt/image/upload/v1741683273/table-2_j4ejht.jpg",
     ],
@@ -173,7 +173,7 @@ export const products: iProduct[] = [
     _id: "10",
     name: "Royal Silver Comfortable Chair",
     category: "Chairs",
-    image: [
+    images: [
       "https://res.cloudinary.com/dgdbctcqt/image/upload/v1741683181/chair-1_sxh2l0.jpg",
       "https://res.cloudinary.com/dgdbctcqt/image/upload/v1741683178/chair-2_k7uz30.jpg",
       "https://res.cloudinary.com/dgdbctcqt/image/upload/v1741683176/chair-4_mxgd84.jpg",
@@ -194,7 +194,7 @@ export const products: iProduct[] = [
     _id: "11",
     name: "Designed Golden Mirror",
     category: "Mirrors",
-    image: [
+    images: [
       "https://res.cloudinary.com/dgdbctcqt/image/upload/v1741683258/mirror-c1_bebdug.jpg",
     ],
     featured: false,
@@ -210,7 +210,7 @@ export const products: iProduct[] = [
     _id: "12",
     name: "Modern Bathroom",
     category: "Bedroom",
-    image: [
+    images: [
       "https://res.cloudinary.com/dgdbctcqt/image/upload/v1741683229/loo_kjkcco.jpg",
     ],
     featured: false,
@@ -226,7 +226,7 @@ export const products: iProduct[] = [
     _id: "13",
     name: "Silver Watch",
     category: "Watches",
-    image: [
+    images: [
       "https://res.cloudinary.com/dgdbctcqt/image/upload/v1741684768/watch-b_zc5q97.jpg",
     ],
     featured: false,
@@ -242,7 +242,7 @@ export const products: iProduct[] = [
     _id: "14",
     name: "Table Watch",
     category: "Watches",
-    image: [
+    images: [
       "https://res.cloudinary.com/dgdbctcqt/image/upload/v1741684799/watch_sns8yj.jpg",
     ],
     featured: false,
@@ -258,7 +258,7 @@ export const products: iProduct[] = [
     _id: "15",
     name: "Modern Bedroom",
     category: "Bedroom",
-    image: [
+    images: [
       "https://res.cloudinary.com/dgdbctcqt/image/upload/v1741683170/bedroom_qjx9gf.jpg",
     ],
     featured: false,
@@ -274,7 +274,7 @@ export const products: iProduct[] = [
     _id: "16",
     name: "Golden Rounded Mirror",
     category: "Mirrors",
-    image: [
+    images: [
       "https://res.cloudinary.com/dgdbctcqt/image/upload/v1741683250/mirror-d1_ioj6lb.jpg",
     ],
     featured: false,
@@ -290,7 +290,7 @@ export const products: iProduct[] = [
     _id: "17",
     name: "Royal Serving Table",
     category: "Tables",
-    image: [
+    images: [
       "https://res.cloudinary.com/dgdbctcqt/image/upload/v1741683194/chair-k_crbokt.jpg",
     ],
     featured: false,
@@ -307,7 +307,7 @@ export const products: iProduct[] = [
     _id: "18",
     name: "Classic Round Serving Table",
     category: "Tables",
-    image: [
+    images: [
       "https://res.cloudinary.com/dgdbctcqt/image/upload/v1741684896/table-i_byytm1.jpg",
     ],
     featured: true,
@@ -324,7 +324,7 @@ export const products: iProduct[] = [
     _id: "19",
     name: "Vintage Silver-Coated Serving Table",
     category: "Tables",
-    image: [
+    images: [
       "https://res.cloudinary.com/dgdbctcqt/image/upload/v1741684988/table-l_lzq3fi.jpg",
     ],
     featured: false,
@@ -341,7 +341,7 @@ export const products: iProduct[] = [
     _id: "20",
     name: "Elegant Wooden Serving Table",
     category: "Tables",
-    image: [
+    images: [
       "https://res.cloudinary.com/dgdbctcqt/image/upload/v1741684865/table-j1_rg2jsa.jpg",
       "https://res.cloudinary.com/dgdbctcqt/image/upload/v1741683186/chair-j2_dki5ug.jpg",
     ],
@@ -359,7 +359,7 @@ export const products: iProduct[] = [
     _id: "21",
     name: "Elegant Silver-Coated Mirror",
     category: "Mirrors",
-    image: [
+    images: [
       "https://res.cloudinary.com/dgdbctcqt/image/upload/v1741683244/mirror-g_kafwms.jpg",
     ],
     featured: true,
@@ -377,7 +377,7 @@ export const products: iProduct[] = [
     _id: "22",
     name: "Traditional Wooden Temple",
     category: "Bedroom",
-    image: [
+    images: [
       "https://res.cloudinary.com/dgdbctcqt/image/upload/v1741689177/temple_u15do1.jpg",
     ],
     featured: false,
@@ -394,7 +394,7 @@ export const products: iProduct[] = [
     _id: "23",
     name: "Brass-Coated Horse Artifact",
     category: "Bedroom",
-    image: [
+    images: [
       "https://res.cloudinary.com/dgdbctcqt/image/upload/v1741683150/artifact_jsf9o0.jpg",
     ],
     featured: false,
@@ -411,7 +411,7 @@ export const products: iProduct[] = [
     _id: "24",
     name: "Royal Table like Sofa",
     category: "Sofas",
-    image: [
+    images: [
       "https://res.cloudinary.com/dgdbctcqt/image/upload/v1741683263/sofa-f_ch0wy9.jpg",
     ],
     featured: false,
@@ -428,7 +428,7 @@ export const products: iProduct[] = [
     _id: "25",
     name: "Majestic Silver-Coated Serving Table",
     category: "Tables",
-    image: [
+    images: [
       "https://res.cloudinary.com/dgdbctcqt/image/upload/v1741692359/table-e_d3r4f8.jpg",
     ],
     featured: false,
@@ -445,7 +445,7 @@ export const products: iProduct[] = [
     _id: "26",
     name: "Elegant Black Chair",
     category: "Chairs",
-    image: [
+    images: [
       "https://res.cloudinary.com/dgdbctcqt/image/upload/v1741683262/sofa-g_lye8zn.jpg",
     ],
     featured: false,
@@ -462,7 +462,7 @@ export const products: iProduct[] = [
     _id: "27",
     name: "Classic Royal Chair",
     category: "Chairs",
-    image: [
+    images: [
       "https://res.cloudinary.com/dgdbctcqt/image/upload/v1741683182/chair-d_lv7u9y.jpg",
     ],
     featured: false,
@@ -479,7 +479,7 @@ export const products: iProduct[] = [
     _id: "28",
     name: "Stylish Brass-Coated Chair",
     category: "Chairs",
-    image: [
+    images: [
       "https://res.cloudinary.com/dgdbctcqt/image/upload/v1741683151/chair-f_ucek1e.jpg",
     ],
     featured: true,
@@ -496,7 +496,7 @@ export const products: iProduct[] = [
     _id: "29",
     name: "Majestic Silver-Coated Chair",
     category: "Chairs",
-    image: [
+    images: [
       "https://res.cloudinary.com/dgdbctcqt/image/upload/v1741684928/table-c_yhkwim.jpg",
     ],
     featured: false,
@@ -513,7 +513,7 @@ export const products: iProduct[] = [
     _id: "30",
     name: "Round Silver-Coated Chair",
     category: "Chairs",
-    image: [
+    images: [
       "https://res.cloudinary.com/dgdbctcqt/image/upload/v1741684896/table-d_jsovx0.jpg",
     ],
     featured: false,
@@ -530,7 +530,7 @@ export const products: iProduct[] = [
     _id: "31",
     name: "Vintage Chair",
     category: "Chairs",
-    image: [
+    images: [
       "https://res.cloudinary.com/dgdbctcqt/image/upload/v1741683151/chair-e_fyofaq.jpg",
       "https://res.cloudinary.com/dgdbctcqt/image/upload/v1741683151/chair-e2_zixqpx.jpg",
     ],
@@ -547,7 +547,7 @@ export const products: iProduct[] = [
     _id: "32",
     name: "Royal Throne Chairs",
     category: "Chairs",
-    image: [
+    images: [
       "https://res.cloudinary.com/dgdbctcqt/image/upload/v1741683211/chair-h3_sfs689.jpg",
       "https://res.cloudinary.com/dgdbctcqt/image/upload/v1741683190/chair-h_sebnac.jpg",
       "https://res.cloudinary.com/dgdbctcqt/image/upload/v1741683171/chair-h2_muefrp.jpg",
@@ -566,7 +566,7 @@ export const products: iProduct[] = [
     _id: "33",
     name: "Royal Silver-Coated Sofa",
     category: "Sofas",
-    image: [
+    images: [
       "https://res.cloudinary.com/dgdbctcqt/image/upload/v1741683264/sofa-h_xwt0ny.jpg",
     ],
     featured: false,
@@ -583,7 +583,7 @@ export const products: iProduct[] = [
     _id: "34",
     name: "Vintage Wooden Sofa",
     category: "Sofas",
-    image: [
+    images: [
       "https://res.cloudinary.com/dgdbctcqt/image/upload/v1741683259/sofa-d_jq2vhz.jpg",
     ],
     featured: false,
@@ -599,7 +599,7 @@ export const products: iProduct[] = [
     _id: "35",
     name: "Classic Silver-Coated Sofa",
     category: "Sofas",
-    image: [
+    images: [
       "https://res.cloudinary.com/dgdbctcqt/image/upload/v1741683261/sofa-c1_ky5ynk.jpg",
     ],
     featured: false,
@@ -616,7 +616,7 @@ export const products: iProduct[] = [
     _id: "36",
     name: "Luxury Throne Sofa",
     category: "Sofas",
-    image: [
+    images: [
       "https://res.cloudinary.com/dgdbctcqt/image/upload/v1741683261/sofa-e_scdbmf.jpg",
     ],
     featured: false,

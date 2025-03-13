@@ -10,15 +10,19 @@ import {
 } from "@/components/ui/table";
 import { Button } from "../ui/button";
 import Link from "next/link";
-import { products } from "@/lib/constants/data";
 import { useToast } from "@/hooks/use-toast";
-import { deleteSingleProduct } from "@/lib/actions/productAction";
-import { useState } from "react";
+import {
+  deleteSingleProduct,
+  getAllProducts,
+} from "@/lib/actions/productAction";
+import { useState, useEffect, useCallback } from "react";
 import { Loader, Trash, Eye } from "lucide-react";
+import { iProduct } from "@/types";
 
 export function AdminProductTable() {
   const { toast } = useToast();
   const [loading, setLoading] = useState("");
+  const [products, setProducts] = useState<iProduct[] | []>([]);
 
   const handleDelete = async (id: string) => {
     setLoading(id);
@@ -28,6 +32,7 @@ export function AdminProductTable() {
         title: "Success",
         description: "Product deleted successfully",
       });
+      fetchProducts();
     } catch (error) {
       toast({
         title: "Failed",
@@ -37,6 +42,23 @@ export function AdminProductTable() {
       setLoading("");
     }
   };
+
+  const fetchProducts = useCallback(() => {
+    getAllProducts()
+      .then((res) => {
+        if (res && res.products) setProducts(res.products);
+      })
+      .catch((e) => {
+        toast({
+          title: e?.message || "Something went wrong",
+          description: "Failed to fetch products",
+        });
+      });
+  }, [toast]);
+
+  useEffect(() => {
+    fetchProducts();
+  }, [fetchProducts]);
   return (
     <Table>
       <TableCaption>A list of your all Products.</TableCaption>
