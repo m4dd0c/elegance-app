@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useMemo } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { MessageCircle } from "lucide-react";
@@ -12,18 +12,16 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { products } from "@/lib/constants/data";
 import Link from "next/link";
+import { getSingleProduct } from "@/lib/actions/productAction";
+import { useToast } from "@/hooks/use-toast";
+import { iProduct } from "@/types";
 
 export default function ProductDetail({ params }: { params: { id: string } }) {
   const [selectedImage, setSelectedImage] = useState(0);
+  const { toast } = useToast();
+  const [product, setProduct] = useState<iProduct | null>(null);
   const [currentUrl, setCurrentUrl] = useState("");
-
-  // Memoized product lookup
-  const product = useMemo(
-    () => products.find((p) => p._id === params.id) || products[0],
-    [params.id],
-  );
 
   // Ensure we get the correct URL after mounting
   useEffect(() => {
@@ -31,6 +29,22 @@ export default function ProductDetail({ params }: { params: { id: string } }) {
       setCurrentUrl(window.location.href);
     }
   }, []);
+
+  useEffect(() => {
+    if (params?.id)
+      getSingleProduct({ id: params.id })
+        .then((res) => {
+          if (res && res?.data) setProduct(res.data);
+        })
+        .catch((e) => {
+          toast({
+            title: e?.message || "Something went wrong",
+            description: "Failed to fetch products",
+          });
+        });
+  }, [toast, params?.id]);
+
+  if (!product) return null;
 
   return (
     <div className="container mx-auto px-4 pt-28 pb-8 md:pb-12">
@@ -43,7 +57,7 @@ export default function ProductDetail({ params }: { params: { id: string } }) {
             className="relative aspect-square overflow-hidden rounded-lg"
           >
             <Image
-              src={product.image[selectedImage]}
+              src={product.images[selectedImage]}
               alt={product.name}
               fill
               className="object-contain"
@@ -51,7 +65,7 @@ export default function ProductDetail({ params }: { params: { id: string } }) {
             />
           </motion.div>
           <div className="grid grid-cols-4 gap-4">
-            {product.image.map((image, index) => (
+            {product.images.map((image, index) => (
               <button
                 key={index}
                 onClick={() => setSelectedImage(index)}
