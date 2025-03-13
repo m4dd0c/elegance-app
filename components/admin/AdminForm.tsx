@@ -10,6 +10,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
+import { Checkbox } from "@/components/ui/checkbox";
 import {
   Select,
   SelectContent,
@@ -104,50 +105,34 @@ export function AdminForm() {
             )}
           </div>
 
-          <div className="grid grid-cols-[1fr 1fr 40px] gap-4">
-            <div className="space-y-2">
-              <Label htmlFor="instruction">instruction</Label>
-              <Input
-                id="instruction"
-                type="text"
-                {...register("instruction")}
-                placeholder="Instruction"
-              />
-              {errors.instruction && (
-                <p className="text-sm text-destructive">
-                  {errors.instruction.message}
-                </p>
-              )}
-            </div>
-            <div className="space-y-2">
-              <Label htmlFor="material">Material</Label>
-              <Input
-                id="material"
-                type="text"
-                {...register("material")}
-                placeholder="Material"
-              />
-              {errors.material && (
-                <p className="text-sm text-destructive">
-                  {errors.material.message}
-                </p>
-              )}
-            </div>
+          <div className="space-y-2">
+            <Label htmlFor="instruction">instruction</Label>
+            <Input
+              id="instruction"
+              type="text"
+              {...register("instruction")}
+              placeholder="Instruction"
+            />
+            {errors.instruction && (
+              <p className="text-sm text-destructive">
+                {errors.instruction.message}
+              </p>
+            )}
+          </div>
 
-            <div className="space-y-2">
-              <Label htmlFor="featured">Featured</Label>
-              <Input
-                id="featured"
-                type="checkbox"
-                {...register("featured")}
-                placeholder="Include featured"
-              />
-              {errors.featured && (
-                <p className="text-sm text-destructive">
-                  {errors.featured.message}
-                </p>
-              )}
-            </div>
+          <div className="space-y-2">
+            <Label htmlFor="material">Material</Label>
+            <Input
+              id="material"
+              type="text"
+              {...register("material")}
+              placeholder="Material"
+            />
+            {errors.material && (
+              <p className="text-sm text-destructive">
+                {errors.material.message}
+              </p>
+            )}
           </div>
 
           <div className="space-y-2">
@@ -238,6 +223,20 @@ export function AdminForm() {
           </div>
 
           <div className="space-y-2">
+            <Label htmlFor="description">Description</Label>
+            <Textarea
+              id="description"
+              {...register("description")}
+              placeholder="Enter product description"
+            />
+            {errors.description && (
+              <p className="text-sm text-destructive">
+                {errors.description.message}
+              </p>
+            )}
+          </div>
+
+          <div className="space-y-2">
             <Label>Product Image</Label>
             <CldUploadWidget
               uploadPreset="MaheshHandicrafts"
@@ -291,18 +290,15 @@ export function AdminForm() {
               </p>
             )}
           </div>
-          <div className="space-y-2">
-            <Label htmlFor="description">Description</Label>
-            <Textarea
-              id="description"
-              {...register("description")}
-              placeholder="Enter product description"
-            />
-            {errors.description && (
-              <p className="text-sm text-destructive">
-                {errors.description.message}
-              </p>
-            )}
+
+          <div className="flex items-center space-x-2">
+            <Checkbox id="terms" />
+            <label
+              htmlFor="terms"
+              className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+            >
+              Add Product to Featured Section
+            </label>
           </div>
 
           <Button type="submit" className="w-full" disabled={isSubmitting}>
