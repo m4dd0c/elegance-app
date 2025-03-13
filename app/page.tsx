@@ -14,17 +14,34 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import { products, testimonials } from "@/lib/constants/data";
+import { testimonials } from "@/lib/constants/data";
 import ProductCard from "@/components/cards/ProductCard";
+import { getAllProducts } from "@/lib/actions/productAction";
+import { useToast } from "@/hooks/use-toast";
 
 export default function Home() {
   const [mounted, setMounted] = useState(false);
-  const [featuredProducts, setFeaturedProducts] = useState(products);
+  const [featuredProducts, setFeaturedProducts] = useState<any[]>();
+  const { toast } = useToast();
 
   useEffect(() => {
     setMounted(true);
-    setFeaturedProducts((prev) => prev.filter((el) => el.featured));
   }, []);
+
+  useEffect(() => {
+    getAllProducts()
+      .then((res) => {
+        console.log(res);
+        if (res && res.products)
+          setFeaturedProducts(res.products.filter((el) => el.featured));
+      })
+      .catch((e) => {
+        toast({
+          title: e?.message || "Something went wrong",
+          description: "Failed to fetch products",
+        });
+      });
+  }, [toast]);
 
   if (!mounted) {
     return null;
@@ -83,9 +100,14 @@ export default function Home() {
             </p>
           </div>
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            {featuredProducts.map((product, index) => (
-              <ProductCard index={index} key={product.id} product={product} />
-            ))}
+            {featuredProducts &&
+              featuredProducts?.map((product, index) => (
+                <ProductCard
+                  index={index}
+                  key={product._id}
+                  product={product}
+                />
+              ))}
           </div>
           <div className="mt-12 text-center">
             <Button variant="outline" size="lg" asChild>
@@ -249,7 +271,7 @@ export default function Home() {
           <Carousel className="mx-auto max-w-5xl">
             <CarouselContent>
               {testimonials.map((testimonial) => (
-                <CarouselItem key={testimonial.id}>
+                <CarouselItem key={testimonial._id}>
                   <div className="p-4">
                     <Card className="overflow-hidden">
                       <CardContent className="p-6 text-center md:p-8">
