@@ -14,7 +14,7 @@ import { products } from "@/lib/constants/data";
 import { useToast } from "@/hooks/use-toast";
 import { deleteSingleProduct } from "@/lib/actions/productAction";
 import { useState } from "react";
-import { Loader, Trash } from "lucide-react";
+import { Loader, Trash, Eye } from "lucide-react";
 
 export function AdminProductTable() {
   const { toast } = useToast();
@@ -39,20 +39,22 @@ export function AdminProductTable() {
   };
   return (
     <Table>
-      <TableCaption>A list of your recent invoices.</TableCaption>
+      <TableCaption>A list of your all Products.</TableCaption>
       <TableHeader>
         <TableRow>
+          <TableHead className="w-[50px]">Series</TableHead>
           <TableHead>Name</TableHead>
           <TableHead className="w-[100px]">Category</TableHead>
           <TableHead className="w-[50px]">Featured</TableHead>
-          <TableHead className="text-right">Action</TableHead>
+          <TableHead className="text-right">Actions</TableHead>
         </TableRow>
       </TableHeader>
       <TableBody>
         {products &&
           products.length > 0 &&
-          products.map((product) => (
+          products.map((product, idx) => (
             <TableRow key={product._id.toString()}>
+              <TableCell>{idx + 1}</TableCell>
               <TableCell className="font-medium">{product.name}</TableCell>
               <TableCell>{product.category}</TableCell>
               <TableCell>
@@ -61,8 +63,15 @@ export function AdminProductTable() {
                 />
               </TableCell>
               <TableCell className="flex justify-end items-center gap-2">
-                <Button asChild variant={"secondary"} className="">
-                  <Link href={`/products/${product._id}`}>View</Link>
+                <Button
+                  asChild
+                  variant={"secondary"}
+                  className="flex items-center justify-center gap-1"
+                >
+                  <Link href={`/products/${product._id}`}>
+                    <Eye size={15} />
+                    <p>View</p>
+                  </Link>
                 </Button>
                 <Button
                   variant={"destructive"}
