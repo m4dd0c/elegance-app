@@ -25,6 +25,7 @@ const ProductCard = ({
           <Image
             src={product?.image?.[0] ?? fallback}
             alt={product?.name ?? "product-image"}
+            quality={40}
             fill
             className="object-cover transition-transform hover:scale-105"
           />
