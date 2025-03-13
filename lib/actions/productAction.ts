@@ -38,7 +38,7 @@ export const getAllProducts = async () => {
 
     const products = await Product.find();
 
-    return products;
+    return { products };
   } catch (error) {
     console.error("Failed to fetch products:", error);
     throw new Error("Failed to fetch products");
@@ -50,9 +50,9 @@ export const getSingleProduct = async ({ id }: { id: string }) => {
     if (!id) return null;
     await connectDB();
 
-    const products = await Product.findById(id);
+    const product = await Product.findById(id);
 
-    return products;
+    return { product };
   } catch (error) {
     console.error("Failed to fetch product:", error);
     throw new Error("Failed to fetch product");
