@@ -6,7 +6,7 @@ export const connectDB = async () => {
     const conn = await mongoose.connect(uri, { dbName: "MaheshHandicrafts" });
     if (!conn) return console.error("Couldn't connect to the DB.");
   } catch (error) {
-    console.error("Couldn't connect to the DB.");
+    console.error("Couldn't connect to the DB.", error);
     return null;
   }
 };
